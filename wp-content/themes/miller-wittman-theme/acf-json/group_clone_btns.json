@@ -1,0 +1,90 @@
+{
+    "key": "group_clone_btns",
+    "title": "Clonable: Buttons",
+    "fields": [
+        {
+            "key": "field_65d0fd5041918",
+            "label": "Buttons",
+            "name": "buttons",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add button",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_65d0fe2541919",
+                    "label": "Link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "parent_repeater": "field_65d0fd5041918"
+                },
+                {
+                    "key": "field_65d0fe2d4191a",
+                    "label": "Button style",
+                    "name": "style",
+                    "aria-label": "",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "primary": "Solid",
+                        "secondary": "Outline"
+                    },
+                    "default_value": "primary",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "layout": "horizontal",
+                    "parent_repeater": "field_65d0fd5041918"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1717113029
+}

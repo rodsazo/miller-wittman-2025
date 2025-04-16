@@ -1,0 +1,95 @@
+{
+    "key": "group_clone_space",
+    "title": "Clonable: Spacing",
+    "fields": [
+        {
+            "key": "field_65cd47732def6",
+            "label": "Spacing",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_65cd4728516f6",
+            "label": "Top spacing",
+            "name": "top_spacing",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "x-small": "XS",
+                "small": "S",
+                "regular": "M",
+                "large": "L"
+            },
+            "default_value": "none",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_65cd475b516f7",
+            "label": "Bottom spacing",
+            "name": "bottom_spacing",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "x-small": "XS",
+                "small": "S",
+                "regular": "M",
+                "large": "L"
+            },
+            "default_value": "small",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1723780760
+}
