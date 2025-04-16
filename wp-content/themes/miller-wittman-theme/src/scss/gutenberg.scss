@@ -1,0 +1,41 @@
+@use "sass:math";
+@use "sass:list";
+@use "sass:color";
+
+@import "variables";
+
+@import "remixicon/remixicon";
+
+// @import 'fontawesome5/fontawesome';
+// @import 'fontawesome5/regular';
+// @import 'fontawesome5/solid';
+
+$gutenberg-container-max-width: 1300px;
+$is-gutenberg: true;
+
+@import "defaults";
+@import "globalcoders/mixins";
+@import "fonts";
+
+.acf-block-preview{
+
+  @import "type";
+
+  @import "globalcoders/reset";
+  @import "globalcoders/gcBlock";
+  @import 'globalcoders/p-modal';
+
+  @import 'layout';
+  @import 'utils';
+
+  @import "modules-index";
+
+}
+
+.editor-styles-wrapper{
+
+  overflow-x: hidden;
+  @import "base";
+  @import "gutenberg/gutenberg-admin-base";
+
+}

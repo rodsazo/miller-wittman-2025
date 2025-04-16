@@ -1,0 +1,133 @@
+/*
+MIXINS
+*/
+$base-font-size : 18px !default;
+
+@function div( $a, $b ) {
+  @return math.div($a, $b);
+}
+
+@function em($size, $base: $base-font-size) {
+  @return div($size * 1px , $base) * 1em;
+}
+@mixin emfont( $size, $line_height : $size, $base: $base-font-size ) {
+  font-size: em($size, $base);
+  line-height: div($line_height,$size);
+}
+
+@function rem($size, $base: $base-font-size) {
+  @return div($size * 1px , $base) * 1rem;
+}
+@mixin remfont( $size, $line_height : $size, $base: $base-font-size ) {
+  font-size: rem($size, $base);
+  line-height: div($line_height,$size);
+}
+
+@function vwsize( $size ) {
+  @return (div($size , 1400) * 100vw);
+}
+
+@mixin gridColumns( $columns ) {
+  grid-template-columns: repeat( #{$columns}, 1fr );
+}
+
+/* EJEMPLO:
+strong{
+  // alt A: Tenemos un elemento con 36px de font size y 40px de line-height
+  @include remfont(36,40);
+
+  // alt B: Tenemos un elemento con 36px de font size y 1.46 de line-height
+  font-size: rem(36);
+  line-height: 1.46;
+}
+*/
+
+//
+// Typografy mixins
+// http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
+//
+
+@mixin enableFontSmoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+@mixin enableFontKerning {
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+  -webkit-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern=1";
+  font-kerning: normal;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder,
+  &:-moz-placeholder, /* Firefox 18- */
+  &::-moz-placeholder,  /* Firefox 19+ */
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &:focus::-webkit-input-placeholder{
+    color:transparent;
+  }
+}
+
+//
+// Clear Fix Object
+//
+
+@mixin o_clearfix{
+  *zoom: 1;
+
+  &:before,
+  &:after{
+    content: ' ';
+    display: table;
+  }
+
+  &:after{
+    clear: both;
+  }
+}
+
+@mixin flex{
+  display: flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  width: 100%;
+}
+
+@mixin objectFit{
+  object-fit: cover;
+  font-family: 'object-fit: cover';
+}
+
+@mixin keyframes( $name ) {
+  @keyframes #{$name} {
+    @content;
+  }
+  @-webkit-keyframes #{$name} {
+    @content
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+}
+
+
+
+$picol-debug: false !default;
+
+@mixin debug(){
+  @if ($picol-debug) {
+    @content;
+  }
+}

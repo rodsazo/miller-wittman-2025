@@ -1,0 +1,19 @@
+.dev-server{
+  position: fixed;
+  top: 0;
+  left: 50%;
+  height: 20px;
+  background: #ff670e;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  color: white;
+  font-weight: bold;
+  padding: 7px 20px 3px;
+  line-height: 15px;
+  border-radius: 0 0 10px 10px;
+  font-size: 12px;
+  z-index: 999999;
+}

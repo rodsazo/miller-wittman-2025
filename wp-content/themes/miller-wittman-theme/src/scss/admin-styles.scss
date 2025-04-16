@@ -1,0 +1,78 @@
+@use "sass:math";
+
+@import 'variables';
+@import 'globalcoders/wp-reset';
+@import 'globalcoders/dev-server';
+
+@import 'admin/adminVariables';
+@import 'admin/adminMenuItems';
+@import 'admin/adminTheme';
+
+/*
+Otros estilos
+*/
+
+// Botón de ACF para añadir layouts al Flexible Content
+
+@mixin wp_button( $color ) {
+
+  $lighter : lighten($color, 6 );
+  $darker : darken( $color, 6 );
+
+  background: $color;
+  border-color: $lighter $darker $darker;
+  -webkit-box-shadow: 0 1px 0 $darker;
+  box-shadow: 0 1px 0 $darker;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px $darker,1px 0 1px $darker,0 1px 1px $darker,-1px 0 1px $darker;
+
+  &:hover{
+    background: darken($color, 3);
+  }
+}
+
+// Add layout de flexible contents
+.acf-button[data-event=add-layout]{
+  @include wp_button(#5c00b8);
+}
+
+
+
+// Add layout de flexible contents
+.acf-button[data-name=add-layout]{
+  @include wp_button(#5519b5);
+}
+
+
+// Add rows de repeaters
+.acf-button[data-event=add-row]{
+  @include wp_button(#0a8f5b);
+
+  @at-root .acf-repeater .acf-repeater &{
+    @include wp_button(#1a8ba0);
+  }
+
+  @at-root .acf-repeater .acf-repeater .acf-repeater &{
+    @include wp_button(#0e5a94);
+  }
+}
+
+// Wysiwygs chiquititos
+.acf-field-wysiwyg{
+  &.small-wysiwyg{
+    min-height: 150px !important;
+    iframe{
+      min-height: 150px !important;
+      height: 150px !important;
+    }
+  }
+
+  &.tiny-wysiwyg{
+    min-height: 150px !important;
+    iframe{
+      min-height: 100px !important;
+      height: 100px !important;
+    }
+  }
+}

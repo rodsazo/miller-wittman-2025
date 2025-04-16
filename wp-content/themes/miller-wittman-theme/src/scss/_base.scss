@@ -1,0 +1,61 @@
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+}
+
+// Body styles go here
+
+@mixin body_styles{
+
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+  color: var(--body-text-color);
+  font-weight: 400;
+
+  -webkit-text-size-adjust:none;
+  overflow-x: clip;
+
+  @include enableFontSmoothing;
+  @include enableFontKerning;
+}
+
+@if( $is-gutenberg ) {
+  @include body_styles;
+} @else {
+
+  html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body{
+    @include body_styles;
+  }
+}
+
+sup{
+  font-size: 75%;
+  position: relative;
+  top: -0.3em;
+}
+
+a, button{
+  appearance: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+hr{
+  display: block;
+  border-top: 1px solid $color-gray-3;
+  border-width: 1px 0 0;
+  appearance: none;
+  margin: 0;
+}
+
+[data-x-cloak]{
+  display: none !important;
+}

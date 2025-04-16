@@ -1,0 +1,111 @@
+@at-root :root{
+
+  --body-font-family: "TT Commons Pro", sans-serif;
+  --body-font-size: 18px;
+  --body-line-height: 1.5;
+  --body-text-color: #{$color-gray-2};
+  --body-letter-spacing: 0.01em;
+
+  --color-accent: #{$color-dark-teal};
+  --color-headings: #{$color-gray-1};
+
+  --eyebrow-color: #{$color-gray-2};
+
+  --heading-1-font-size: 60px;
+  --heading-1-line-height: 1;
+
+  --heading-2-font-size: 48px;
+  --heading-2-line-height: 1.2;
+
+  --heading-3-font-size: 32px;
+  --heading-3-line-height: 1.2;
+
+  --heading-4-font-size: 24px;
+  --heading-4-line-height: 1.2;
+
+  --heading-5-font-size: 18px;
+  --heading-5-line-height: 1.2;
+
+  --heading-6-font-size: 14px;
+  --heading-6-line-height: 1.2;
+
+  --large-text-font-size: 20px;
+  --small-text-font-size: 16px;
+
+
+  @media screen and (max-width: $bp-tablet--small){
+    --body-font-size: 16px;
+    --large-text-font-size: 18px;
+    --heading-1-font-size: 48px;
+    --heading-2-font-size: 32px;
+    --heading-3-font-size: 24px;
+    --heading-4-font-size: 20px;
+    --heading-5-font-size: 16px;
+    --heading-6-font-size: 13px;
+     --small-text-font-size: 14px;
+  }
+
+  @media screen and (max-width: $bp-mobile){
+    --body-font-size: 16px;
+    --heading-1-font-size: 36px;
+    --heading-2-font-size: 28px;
+    --heading-3-font-size: 22px;
+    --heading-4-font-size: 20px;
+    --heading-5-font-size: 16px;
+    --heading-6-font-size: 13px;
+    --large-text-font-size: 16px;
+     --small-text-font-size: 13px;
+  }
+
+}
+
+@mixin heading( $level, $letter_spacing: -0.02em ) {
+  h#{$level}:not([class]),
+  h#{$level}.wp-block-heading,
+  .h-#{$level}{
+    color: var(--color-headings);
+    font-weight: 700;
+    line-height: var(--heading-#{$level}-line-height);
+    font-size: var(--heading-#{$level}-font-size);
+    letter-spacing: $letter_spacing;
+    margin: -0.1667em 0;
+    transition: color 0.2s ease;
+    @content;
+
+    a:hover{
+      color: var(--color-accent);
+    }
+  }
+}
+
+@include heading(1);
+@include heading(2);
+@include heading(3);
+@include heading(4);
+@include heading(5){
+  font-weight: 600;
+  letter-spacing: 0;
+};
+
+
+@include heading(6, 0.1em){
+  text-transform: uppercase;
+  color: var(--eyebrow-color);
+}
+
+.text-large{
+  font-size: var(--large-text-font-size);
+}
+.text-small{
+  font-size: var(--small-text-font-size);
+}
+
+.text-cap-height{
+  margin: -0.3em 0;
+}
+
+.text-center{
+  text-align: center;
+}
+
+

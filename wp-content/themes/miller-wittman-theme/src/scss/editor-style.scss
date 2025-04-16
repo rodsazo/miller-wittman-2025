@@ -1,0 +1,9 @@
+@use "sass:color";
+@use "sass:list";
+@use "sass:map";
+
+$is_editor : true;
+@import 'variables';
+// @import 'fontawesome5/fontawesome';
+// @import 'fontawesome5/regular';
+@import 'modules/wpContent';

@@ -1,0 +1,97 @@
+$p-modal-bg-color: black !default;
+$p-modal-bg-opacity: 0.9 !default;
+$p-modal-z-index: 900 !default;
+$p-modal-padding-vertical : 100px !default;
+$p-modal-padding-horizontal: 20px !default;
+
+$p-modal-close-width : 50px !default;
+$p-modal-close-height : $p-modal-close-width !default;
+$p-modal-close-line-height : $p-modal-close-height !default;
+$p-modal-close-border-radius: 50px !default;
+
+$p-modal-close-bg-color: black !default;
+$p-modal-close-color: white !default;
+$p-modal-close-font-family: inherit !default;
+$p-modal-close-font-size: 40px !default;
+$p-modal-close-content : '×' !default;
+$p-modal-close-offset-x : 0 !default;
+$p-modal-close-offset-y : -60px !default;
+$p-modal-close-font-weight : 400 !default;
+
+body.p-modal-is-open{
+  overflow-y: hidden;
+}
+
+.p-modal{
+  display: none;
+
+  &__overlay{
+    display: none;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: $p-modal-padding-vertical $p-modal-padding-horizontal;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    overflow-y: auto;
+
+    background: color.adjust( $p-modal-bg-color, $alpha: ($p-modal-bg-opacity - 1) );
+    z-index: $p-modal-z-index;
+  }
+
+  &__container{
+    min-height: calc(100vh - #{(2*$p-modal-padding-vertical)});
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > *{
+      position: relative;
+    }
+  }
+
+  &__close{
+    position: absolute;
+    width: $p-modal-close-width;
+    height: $p-modal-close-height;
+    opacity: 0.85;
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+    -ms-transition: opacity 0.2s ease;
+    -o-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+
+    text-align: center;
+    line-height: $p-modal-close-line-height;
+
+    border-radius: $p-modal-close-border-radius;
+
+    background-color: $p-modal-close-bg-color;
+    color: $p-modal-close-color;
+    right: $p-modal-close-offset-x;
+    top: $p-modal-close-offset-y;
+
+    cursor: pointer;
+
+    &:before{
+      font-family: $p-modal-close-font-family;
+      font-size: $p-modal-close-font-size;
+      content: $p-modal-close-content;
+      font-weight: $p-modal-close-font-weight;
+    }
+
+    &:hover{
+      opacity: 1;
+    }
+
+  }
+
+}
+
+
+
+
+

@@ -1,0 +1,13 @@
+// Gutenberg y PicolBlocks
+
+$is-gutenberg: false !default;
+
+$gcBlock-spacing: (
+    "x-small" ,
+    "small" ,
+    "regular" ,
+    "large" ,
+    "huge"
+) !default;
+
+$gcBlock-spacing-property: 'padding' !default;

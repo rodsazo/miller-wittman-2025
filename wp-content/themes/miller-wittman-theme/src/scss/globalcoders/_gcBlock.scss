@@ -1,0 +1,62 @@
+@at-root :root{
+
+  --block-top-spacing: 0;
+  --block-bottom-spacing: 0;
+
+  --block-spacing-x-small: 48px;
+  --block-spacing-small: 64px;
+  --block-spacing-regular: 96px;
+  --block-spacing-large: 120px;
+
+  --block-background: transparent;
+  --block-top-radius: 0;
+  --block-bot-radius: 0;
+
+  --block-corner-radius: 48px;
+
+  @media screen and (max-width: $bp-tablet--small){
+    --block-spacing-small: 48px;
+    --block-spacing-regular: 46px;
+    --block-spacing-large: 80px;
+  }
+}
+
+.gcBlock{
+  margin-left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  position: relative;
+
+  background: var(--block-background);
+  color: var(--body-text-color);
+
+  padding-top: var(--block-top-spacing);
+  padding-bottom: var(--block-bottom-spacing);
+
+  // ADMIN STYLES
+  // remove 281px from the width when sidebar is open
+  // Todo: Make this a Javascript thing
+  @if( $is-gutenberg ){
+    width: calc(100vw - 281px);
+  }
+
+  &__content{
+    position: relative;
+    z-index: 1;
+  }
+
+
+  /* - VARIATIONS - */
+
+
+  @each $size in $gcBlock-spacing {
+    &.--top_spacing-#{$size} {
+      --block-top-spacing: var(--block-spacing-#{$size});
+    }
+    &.--bottom_spacing-#{$size} {
+      --block-bottom-spacing: var(--block-spacing-#{$size});
+    }
+  }
+
+
+}

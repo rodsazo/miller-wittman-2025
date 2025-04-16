@@ -1,0 +1,51 @@
+@at-root :root{
+  --container-padding-sides: 48px;
+
+  @media screen and (max-width: $bp-laptop--small){
+    --container-padding-sides: 20px;
+  }
+
+  @media screen and (max-width: $bp-tablet--small){
+    --container-padding-sides: 20px;
+  }
+}
+.container{
+  max-width: $container-width;
+  padding: 0 var(--container-padding-sides);
+  margin: 0 auto;
+  box-sizing: content-box;
+
+  &--medium{
+    max-width: 1112px;
+  }
+
+  &--small{
+    max-width: 880px;
+  }
+
+  &--content{
+    max-width: 764px;
+  }
+
+  &--tiny{
+    max-width: 660px;
+  }
+
+  &--full{
+    max-width: none;
+  }
+}
+
+.fw-container{
+  padding: 0 20px;
+  max-width: 1600px;
+  margin: 0 auto;
+
+  @media screen and (max-width: $bp-tablet--small){
+    padding: 0 12px;
+  }
+}
+
+.page-container{
+  position: relative;
+}
