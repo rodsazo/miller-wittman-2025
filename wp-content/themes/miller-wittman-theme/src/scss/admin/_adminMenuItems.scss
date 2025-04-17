@@ -1,0 +1,20 @@
+
+/*
+Colores del menú admin
+*/
+
+@mixin menu_post_type_color( $post_type, $color ) {
+  #menu-posts-#{$post_type} .wp-menu-image:before{
+    color: $color !important;
+  }
+}
+
+@include menu_post_type_color('noticia', #2be1d1);
+
+/*
+Ícono y color de la página de opciones
+ */
+#toplevel_page_opciones-generales .wp-menu-image:before{
+  color: white !important;
+  content: '\f108';
+}

@@ -1,0 +1,124 @@
+@at-root :root{
+
+  --btn-lg-padding: 22px 40px;
+  --btn-md-padding: 18px 40px;
+  --btn-sm-padding: 15px 32px;
+
+  --btn-md-font-size: 18px;
+  --btn-sm-font-size: 14px;
+
+  --btn-gap: 10px;
+  --btn-group-justify-content: flex-start;
+
+  /*
+  Styles
+   */
+
+  --btn-main-background: #{$color-cardinal};
+  --btn-main-color: white;
+  --btn-main-border-color: #{$color-cardinal};
+
+  --btn-main-hover-background: #{color.adjust($color-cardinal,$lightness: -10%)};
+  --btn-main-hover-color: white;
+  --btn-main-hover-border-color: #{$color-cardinal};
+  --btn-main-outline: #{color.adjust($color-cardinal, $alpha: -0.8)};
+
+  --btn-secondary-background: transparent;
+  --btn-secondary-color: #{$color-dark-teal};
+  --btn-secondary-border-color: #{$color-dark-teal};
+
+  --btn-secondary-hover-background: #{color.adjust($color-dark-teal,$alpha: -0.9)};
+  --btn-secondary-hover-color: #{$color-dark-teal};
+  --btn-secondary-hover-border-color: #{$color-dark-teal};
+  --btn-secondary-outline: #{color.adjust($color-dark-teal, $alpha: -0.8)};
+
+
+  /*
+  Button settings
+   */
+
+  --btn-padding: var(--btn-md-padding);
+  --btn-font-size: var(--btn-md-font-size);
+
+  --btn-background: var(--btn-main-background);
+  --btn-color: var(--btn-main-color);
+  --btn-border-color: var(--btn-main-border-color);
+  --btn-hover-background: var(--btn-main-hover-background);
+  --btn-hover-color: var(--btn-main-hover-color);
+  --btn-hover-border-color: var(--btn-main-hover-border-color);
+
+  --btn-outline: var(--btn-main-outline);
+
+
+  @media screen and (max-width: $bp-tablet--small){
+    // --btn-ms-padding: 16px 24px; // Todo: Check with design
+  }
+
+}
+.btn{
+
+  display: inline-flex;
+  color: var(--btn-color);
+  padding: var(--btn-padding);
+  background: var(--btn-background);
+  font-size: var(--btn-font-size);
+  font-weight: 700;
+  border-radius: 32px;
+  line-height: 1;
+  justify-content: center;
+  border: 1px solid var(--btn-border-color);
+
+  @media (hover: hover) {
+    &:hover{
+      background: var(--btn-hover-background);
+      color: var(--btn-hover-color);
+      border-color: var(--btn-hover-border-color);
+    }
+  }
+
+  &:focus,
+  &:active{
+    outline: none;
+    background: var(--btn-hover-background);
+    color: var(--btn-hover-color);
+    border-color: var(--btn-hover-border-color);
+    box-shadow: 0 0 0px 2px var(--btn-outline);
+  }
+
+  &--small{
+    --btn-padding: var(--btn-sm-padding);
+    --btn-font-size: var(--btn-sm-font-size);
+  }
+
+  &--secondary{
+    --btn-background: var(--btn-secondary-background);
+    --btn-color: var(--btn-secondary-color);
+    --btn-border-color: var(--btn-secondary-border-color);
+    --btn-hover-background: var(--btn-secondary-hover-background);
+    --btn-hover-color: var(--btn-secondary-hover-color);
+    --btn-hover-border-color: var(--btn-secondary-hover-border-color);
+    --btn-outline: var(--btn-secondary-outline);
+  }
+
+  &--round{
+    padding:{
+      left: 0;
+      right: 0;
+    }
+    width: 56px;
+  }
+
+
+  &__group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: var(--btn-group-justify-content);
+
+    @media screen and (max-width: $bp-mobile){
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+
+}

@@ -1,0 +1,41 @@
+@at-root :root{
+  --flow-gap--large: 64px;
+  --flow-gap--medium: 48px;
+  --flow-gap: 40px;
+  --flow-gap--small: 32px;
+  --flow-gap--tiny: 24px;
+  --flow-gap--tight : 16px;
+  --flow-align-items: stretch;
+
+  @media screen and (max-width: $bp-tablet--small){
+    --flow-gap: 32px;
+    --flow-gap--small: 24px;
+    --flow-gap--tiny: 18px;
+  }
+}
+.flow{
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--flow-gap);
+
+  &--small{
+    gap: var(--flow-gap--small);
+  }
+
+  &--medium{
+    gap: var(--flow-gap--medium);
+  }
+
+
+  &--tiny{
+    gap: var(--flow-gap--tiny);
+  }
+  &--tight{
+    gap: var(--flow-gap--tight);
+  }
+  &--large{
+    gap: var(--flow-gap--large);
+  }
+
+}

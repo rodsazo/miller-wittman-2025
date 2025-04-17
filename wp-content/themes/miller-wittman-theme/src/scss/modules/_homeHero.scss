@@ -1,0 +1,16 @@
+.homeHero{
+  @include f_soehne;
+  padding-top: 27.65%;
+  font-size: 260px;
+  font-weight: bold;
+  line-height: 0.8;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+
+  &__highlight{
+    background: var(--bg-image);
+    background-clip: text;
+    color: transparent;
+    background-size: cover;
+  }
+}

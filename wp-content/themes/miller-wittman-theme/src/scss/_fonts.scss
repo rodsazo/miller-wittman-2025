@@ -1,16 +1,21 @@
 @mixin fontUrls( $weight, $style, $file_name ) {
   @font-face {
-    font-family: "TT Commons Pro";
+    font-family: "Helvetica Now";
     font-style: $style;
     font-weight: $weight;
-    src: url('../font/ttcommons/TTCommonsPro-#{$file_name}.ttf');
+    src: url('../font/helvetica-now/HelveticaNowDisplay-#{$file_name}.otf');
   }
 }
 
-@include fontUrls(400, normal, 'Normal');
-@include fontUrls(400, italic, 'NormalIt');
-@include fontUrls(500, normal, 'Md');
-@include fontUrls(600, normal, 'Db');
+@include fontUrls(400, normal, 'Regular');
+@include fontUrls(400, italic, 'Italic');
 @include fontUrls(700, normal, 'Bd');
 @include fontUrls(700, italic, 'BdIt');
+
+@font-face {
+  font-family: "Soehne Schmal";
+  font-style: normal;
+  font-weight: bold;
+  src: url('../font/soehne-schmal/soehne-schmal-halbfett.woff2');
+}
 

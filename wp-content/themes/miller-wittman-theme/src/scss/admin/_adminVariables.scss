@@ -1,0 +1,25 @@
+$adminBg : $color-light-grey;
+
+$adminMenu-bg : $color-gray-1;
+$adminMenu-width: 180px;
+
+$adminRightCol-width : 320px;
+
+$adminColor-accent : $color-teal;
+$adminColor-links : $color-dark-teal;
+$adminColor-titles : $color-gray-1;
+$adminColor-text : $color-dark-grey;
+
+$adminColor-table-borders: mix($color-teal, white, 50%) ;
+$adminColor-table-stripe-bg: mix($color-teal, white, 5%);
+
+// Derivados
+
+$adminColor-links--active : darken($adminColor-links, 5%);
+$adminMenu-activeTab-bg: $adminColor-accent;
+$adminMenu-hoverTab-color: $adminColor-accent;
+$adminMenu-hoverTab-icon-color: $adminColor-accent;
+
+$adminMenu-hoverTab-bg: darken($adminMenu-bg, 2.5);
+$adminMenu-submenuBg : darken( $adminMenu-bg, 5);
+$adminMenu-lines : lighten( $adminMenu-bg, 5);
