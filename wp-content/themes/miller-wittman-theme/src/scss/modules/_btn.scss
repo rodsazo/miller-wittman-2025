@@ -14,23 +14,23 @@
   Styles
    */
 
-  --btn-main-background: #{$color-cardinal};
-  --btn-main-color: white;
-  --btn-main-border-color: #{$color-cardinal};
+  //--btn-main-background: #{$color-cardinal};
+  //--btn-main-color: white;
+  //--btn-main-border-color: #{$color-cardinal};
 
-  --btn-main-hover-background: #{color.adjust($color-cardinal,$lightness: -10%)};
-  --btn-main-hover-color: white;
-  --btn-main-hover-border-color: #{$color-cardinal};
-  --btn-main-outline: #{color.adjust($color-cardinal, $alpha: -0.8)};
-
-  --btn-secondary-background: transparent;
-  --btn-secondary-color: #{$color-dark-teal};
-  --btn-secondary-border-color: #{$color-dark-teal};
-
-  --btn-secondary-hover-background: #{color.adjust($color-dark-teal,$alpha: -0.9)};
-  --btn-secondary-hover-color: #{$color-dark-teal};
-  --btn-secondary-hover-border-color: #{$color-dark-teal};
-  --btn-secondary-outline: #{color.adjust($color-dark-teal, $alpha: -0.8)};
+  //--btn-main-hover-background: #{color.adjust($color-cardinal,$lightness: -10%)};
+  //--btn-main-hover-color: white;
+  //--btn-main-hover-border-color: #{$color-cardinal};
+  //--btn-main-outline: #{color.adjust($color-cardinal, $alpha: -0.8)};
+  //
+  //--btn-secondary-background: transparent;
+  //--btn-secondary-color: #{$color-dark-teal};
+  //--btn-secondary-border-color: #{$color-dark-teal};
+  //
+  //--btn-secondary-hover-background: #{color.adjust($color-dark-teal,$alpha: -0.9)};
+  //--btn-secondary-hover-color: #{$color-dark-teal};
+  //--btn-secondary-hover-border-color: #{$color-dark-teal};
+  //--btn-secondary-outline: #{color.adjust($color-dark-teal, $alpha: -0.8)};
 
 
   /*

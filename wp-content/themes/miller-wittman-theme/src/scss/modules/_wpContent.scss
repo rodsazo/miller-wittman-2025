@@ -5,7 +5,7 @@ $is_editor : false !default;
   --wpContent-heading-space: 0.5em;
 
   --wpContent-ul-bullet: '•';
-  --wpContent-accent-color: #{$color-dark-teal};
+  --wpContent-accent-color: var(--color-accent);
 }
 
 @mixin wpContent{
@@ -70,7 +70,7 @@ $is_editor : false !default;
     &,
     td,
     th{
-      border: 1px solid $color-gray-3;
+      border: 1px solid var(--color-lines);
     }
 
     td, th {
@@ -79,8 +79,7 @@ $is_editor : false !default;
     }
 
     th{
-      background: $color-gray-4;
-      color: $color-gray-1;
+      background: $color-beige;
       font-weight: 600;
     }
 
