@@ -3,12 +3,13 @@
     font-family: "Helvetica Now";
     font-style: $style;
     font-weight: $weight;
-    src: url('../font/helvetica-now/HelveticaNowDisplay-#{$file_name}.otf');
+    src: url('../font/helvetica-now/HelveticaNowText-#{$file_name}.otf');
   }
 }
 
 @include fontUrls(400, normal, 'Regular');
 @include fontUrls(400, italic, 'Italic');
+@include fontUrls(600, normal, 'Medium');
 @include fontUrls(700, normal, 'Bd');
 @include fontUrls(700, italic, 'BdIt');
 
