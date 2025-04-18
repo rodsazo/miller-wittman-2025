@@ -10,8 +10,8 @@ class CustomBlocks{
 
         $blocks->addBlock('home-hero', 'Home Hero');
         $blocks->addBlock('home-intro', 'Home Intro');
-        // DONE
         $blocks->addBlock('work-preview', 'Work Preview');
+        // DONE
         $blocks->addBlock('testimonials', 'Testimonials');
         $blocks->addBlock('page-hero', 'Page Hero');
         $blocks->addBlock('two-column-text', 'Two-column Text');
@@ -20,10 +20,7 @@ class CustomBlocks{
         $blocks->addBlock('insights', 'Insights Page');
 
         /*
-         * Our Work Block
-         * - Max items
-         *
-         * Quote Block
+         * Testimonials Block
          * - Text
          * - Image
          * - Name
