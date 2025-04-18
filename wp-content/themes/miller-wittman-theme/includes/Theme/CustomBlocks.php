@@ -9,6 +9,7 @@ class CustomBlocks{
         $blocks = new PicolBlockGroup('Theme blocks', 'Gifted Healthcare');
 
         $blocks->addBlock('home-hero', 'Home Hero');
+        // DONE
         $blocks->addBlock('home-intro', 'Home Intro');
         $blocks->addBlock('work-preview', 'Work Preview');
         $blocks->addBlock('testimonials', 'Testimonials');
@@ -19,9 +20,6 @@ class CustomBlocks{
         $blocks->addBlock('insights', 'Insights Page');
 
         /*
-         * Home Hero
-         * - Text, orange, blue
-         *
          * Home intro
          * - Text
          * - Link

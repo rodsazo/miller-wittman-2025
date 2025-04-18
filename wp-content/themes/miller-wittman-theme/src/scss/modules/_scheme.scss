@@ -3,5 +3,6 @@
     --body-text-color: white;
     --btn-background: white;
     --btn-text: #{$color-coal};
+    color: var(--body-text-color);
   }
 }

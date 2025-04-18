@@ -1,4 +1,97 @@
 .homeIntro{
   background: $color-coal;
+  padding-top: clamp(60px, 27.65%, 240px);
+  padding-bottom: clamp(45px, 26%, 60px);
+  position: relative;
 
+  &__bg{
+    position: absolute;
+    inset: 0;
+    opacity: 0.1;
+  }
+
+  .container{
+    position: relative;
+    z-index: 1;
+  }
+
+  &__text{
+    color: $color-beige;
+    @include f_display;
+    font-size: 36px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+  &__cta{
+    margin-top: 48px;
+  }
+
+  &__marqueeContainer{
+    margin-left: -100vw;
+    position: relative;
+    z-index: 1;
+    color: #8A9199;
+    margin-top: 96px;
+  }
+  &__marquee{
+    animation: marquee var(--marquee-scroll-duration) linear infinite;
+  }
+  &__marqueeContent{
+    white-space: nowrap;
+    font-size: 0;
+  }
+  &__phrase{
+    margin-left: 81px;
+    font-size: clamp(20px, 3vw, 40px);
+    @include f_soehne;
+    text-transform: uppercase;
+    line-height: 0.96;
+    display: inline-block;
+    user-select: none;
+    position: relative;
+
+    &::before{
+      content: '+';
+      position: absolute;
+      left: -55px;
+      width: 30px;
+      text-align: center;
+    }
+  }
+
+  @media screen and (min-width: 600px){
+    &__text{
+      font-size: 48px;
+    }
+  }
+  @media screen and (min-width: 1024px){
+    &__text{
+      font-size: 86px;
+    }
+
+    &__bg{
+      inset: auto;
+      top: 24px;
+      right: 24px;
+      left: 50%;
+      bottom: 60px;
+    }
+
+    &__cta{
+      margin-top: 165px;
+    }
+    &__marqueeContainer{
+      margin-top: 165px;
+    }
+  }
+
+}
+
+@keyframes marquee{
+  from{
+    transform: translate(0);
+  }
+  to{
+    transform: translate(var(--marquee-row-scroll-distance));
+  }
 }
