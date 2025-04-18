@@ -13,10 +13,18 @@
 @include fontUrls(700, normal, 'Bd');
 @include fontUrls(700, italic, 'BdIt');
 
+
 @font-face {
   font-family: "Soehne Schmal";
   font-style: normal;
   font-weight: bold;
   src: url('../font/soehne-schmal/soehne-schmal-halbfett.woff2');
+}
+
+@font-face {
+  font-family: "Helvetica Now Display";
+  font-style: normal;
+  font-weight: bold;
+  src: url('../font/helvetica-now/HelveticaNowDisplay-Bd.otf');
 }
 

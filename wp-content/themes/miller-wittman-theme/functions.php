@@ -116,6 +116,22 @@ function the_buttons( $field_name = null, $centered = false ) {
     part('global/buttons', ['buttons' => $buttons, 'centered' => $centered]);
 }
 
+function the_button ( $link, $style = 'primary')
+{
+    ?>
+    <a class="btn btn--<?php echo $style; ?>" href="<?php echo $link['url']; ?>" <?php echo $link['target_attr']; ?>>
+        <span class="btn__bubble">
+            <?php echo $link['title']; ?>
+        </span>
+        <span class="btn__arrow">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.05733 16.0573L8.94267 17.9426L17.8853 8.99992L8.94267 0.057251L7.05733 1.94258L12.7813 7.66658H0V10.3333H12.7813L7.05733 16.0573Z" fill="white"/>
+            </svg>
+        </span>
+    </a>
+    <?php
+}
+
 function theGravityForm( $form_id ) : void
 {
     if(function_exists('gravity_form')){
@@ -135,24 +151,7 @@ function get_link_params( $link ) : array|false {
 
     return $link;
 }
-
-function get_array_field( $field_name, $post_id = null ) : array
-{
-    $value = get_field( $field_name, $post_id );
-    return is_array( $value ) ? $value : [];
-}
-
-function mock_image( $size_str = '1200x700' ) {
-    return 'https://placehold.co/' . $size_str;
-}
-
 remove_filter('the_content', 'wptexturize');
-
-
-function jobForm ( $group_id = false, $small = false, $job_types = [] )
-{
-    part('job-search-form', ['group_id' => $group_id, 'small' => $small, 'job_types' => $job_types]);
-}
 
 function get_menu_items( $menu_name ) {
     if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
@@ -163,29 +162,6 @@ function get_menu_items( $menu_name ) {
     return false;
 }
 
-
-/*
- * For some reason, the 'registered-nurse-rn' gets transformed by
- * Facet WP into an md5 string (59c3fcbdbecb21058dca63fec44e59c3)
- */
-
-function sanitize_profession_slug( $slug ) {
-//    if( $slug === 'registered-nurse-rn'){
-//        $slug = '59c3fcbdbecb21058dca63fec44e59c3';
-//    }
-    return $slug;
-}
-
-function getCurrentUrl() {
-    $protocol = is_ssl() ? 'https://' : 'http://';
-    return ($protocol) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-}
-
-
-function get_job_page_id ()
-{
-    return get_field('job_search_page', 'options');
-}
 
 function get_blog_page_id()
 {
