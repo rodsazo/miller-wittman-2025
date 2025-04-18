@@ -60,11 +60,6 @@
 
 }
 
-@mixin f_soehne{
-  font-family: 'Soehne Schmal';
-  font-style: normal;
-  font-weight: bold;
-}
 
 @mixin heading( $level, $letter_spacing: -0.02em ) {
   h#{$level}:not([class]),
