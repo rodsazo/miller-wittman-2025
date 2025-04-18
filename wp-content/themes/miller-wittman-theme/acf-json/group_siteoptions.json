@@ -50,8 +50,8 @@
         },
         {
             "key": "field_672121703a844",
-            "label": "Job search page",
-            "name": "job_search_page",
+            "label": "Blog page",
+            "name": "blog_page_id",
             "aria-label": "",
             "type": "post_object",
             "instructions": "Select a private page",
@@ -62,7 +62,35 @@
                 "class": "",
                 "id": ""
             },
-            "relevanssi_exclude": 0,
+            "post_type": [
+                "page"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_68025baa76b88",
+            "label": "Work page",
+            "name": "work_page_id",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "Select a private page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "post_type": [
                 "page"
             ],
@@ -813,6 +841,7 @@
                     "collapsed": "",
                     "button_label": "Add profession",
                     "rows_per_page": 20,
+                    "parent_repeater": "field_6722675d0f041",
                     "sub_fields": [
                         {
                             "key": "field_672268250f042",
@@ -842,8 +871,7 @@
                             "bidirectional_target": [],
                             "parent_repeater": "field_67226ba7833b4"
                         }
-                    ],
-                    "parent_repeater": "field_6722675d0f041"
+                    ]
                 }
             ]
         }
@@ -866,5 +894,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1733187939
+    "modified": 1744985011
 }

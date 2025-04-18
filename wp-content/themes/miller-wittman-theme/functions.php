@@ -163,9 +163,15 @@ function get_menu_items( $menu_name ) {
 }
 
 
+function get_work_page_id()
+{
+    return get_field('work_page_id', 'options');
+}
+
+
 function get_blog_page_id()
 {
-    return get_field('blog_page', 'options');
+    return get_field('blog_page_id', 'options');
 }
 
 /*

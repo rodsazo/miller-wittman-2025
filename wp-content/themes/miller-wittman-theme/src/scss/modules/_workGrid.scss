@@ -1,0 +1,28 @@
+.workGrid{
+  display: grid;
+  column-gap: 40px;
+  row-gap: 80px;
+
+  @media screen and (min-width: $bp-tablet){
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  &__item{
+    padding-bottom: 32px;
+    border-bottom: 4px solid white;
+  }
+
+  &__image{
+    display: block;
+    aspect-ratio: 620 / 465;
+    position: relative;
+  }
+
+  &__terms{
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+}

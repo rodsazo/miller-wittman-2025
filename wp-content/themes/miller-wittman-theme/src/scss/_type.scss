@@ -15,11 +15,11 @@
   --heading-1-font-size: 60px;
   --heading-1-line-height: 1;
 
-  --heading-2-font-size: 48px;
-  --heading-2-line-height: 1.2;
+  --heading-2-font-size: 160px;
+  --heading-2-line-height: 0.96;
 
-  --heading-3-font-size: 32px;
-  --heading-3-line-height: 1.2;
+  --heading-3-font-size: 80px;
+  --heading-3-line-height: 1;
 
   --heading-4-font-size: 24px;
   --heading-4-line-height: 1.2;
@@ -38,8 +38,9 @@
     --body-font-size: 16px;
     --large-text-font-size: 18px;
     --heading-1-font-size: 48px;
-    --heading-2-font-size: 32px;
-    --heading-3-font-size: 24px;
+    --heading-2-font-size: 120px;
+    --heading-3-font-size: 64px;
+
     --heading-4-font-size: 20px;
     --heading-5-font-size: 16px;
     --heading-6-font-size: 13px;
@@ -49,8 +50,9 @@
   @media screen and (max-width: $bp-mobile){
     --body-font-size: 16px;
     --heading-1-font-size: 36px;
-    --heading-2-font-size: 28px;
-    --heading-3-font-size: 22px;
+    --heading-2-font-size: 96px;
+    --heading-3-font-size: 48px;
+
     --heading-4-font-size: 20px;
     --heading-5-font-size: 16px;
     --heading-6-font-size: 13px;
@@ -61,15 +63,13 @@
 }
 
 
-@mixin heading( $level, $letter_spacing: -0.02em ) {
-  h#{$level}:not([class]),
+@mixin heading( $level ) {
+  // h#{$level}:not([class]),
   h#{$level}.wp-block-heading,
   .h-#{$level}{
     color: var(--color-headings);
-    font-weight: 700;
     line-height: var(--heading-#{$level}-line-height);
     font-size: var(--heading-#{$level}-font-size);
-    letter-spacing: $letter_spacing;
     margin: -0.1667em 0;
     transition: color 0.2s ease;
     @content;
@@ -80,17 +80,21 @@
   }
 }
 
-@include heading(1);
-@include heading(2);
-@include heading(3);
-@include heading(4);
-@include heading(5){
-  font-weight: 600;
-  letter-spacing: 0;
+@include heading(1){
+  @include f_soehne;
 };
+@include heading(2){
+  @include f_soehne;
+};
+@include heading(3){
+  @include f_soehne;
+};
+@include heading(4);
+@include heading(5);
 
 
-@include heading(6, 0.1em){
+
+@include heading(6){
   text-transform: uppercase;
   color: var(--eyebrow-color);
 }

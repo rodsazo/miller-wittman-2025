@@ -15,7 +15,10 @@ module.exports = function scssTask() {
     browserCacheBust();
 
     return gulp.src(sources.css.sources, {sourcemaps: true})
-        .pipe(sass({ outputStyle: 'compressed', quiet: true }).on('error', sass.logError))
+        .pipe(sass({
+            outputStyle: 'compressed',
+            quiet: true,
+        }).on('error', sass.logError))
         .pipe(postcss([autoprefixer()]))
         .pipe(gulp.dest(sources.css.destination));
 

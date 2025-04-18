@@ -1,0 +1,16 @@
+.workPreview{
+  padding-top: clamp(80px, 1vw, 140px);
+  padding-bottom: clamp(96px, 1.1vw, 160px);
+  background: $color-coal;
+
+  &__grid{
+    margin-top: 60px;
+  }
+
+  &__cta{
+    margin-top: 48px;
+    padding-top: 4.28%;
+    text-align: center;
+  }
+
+}
