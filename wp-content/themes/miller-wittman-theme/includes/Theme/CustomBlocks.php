@@ -20,13 +20,6 @@ class CustomBlocks{
         $blocks->addBlock('insights', 'Insights Page');
 
         /*
-         * Testimonials Block
-         * - Text
-         * - Image
-         * - Name
-         * - Position
-         * - Company
-         *
          * WORK DETAIL PAGE
          *
          * Work Header
