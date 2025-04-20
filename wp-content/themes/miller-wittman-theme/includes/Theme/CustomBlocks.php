@@ -6,13 +6,14 @@ use Picol\PicolBlockGroup;
 class CustomBlocks{
     static function start() : void
     {
-        $blocks = new PicolBlockGroup('Theme blocks', 'Gifted Healthcare');
+        $blocks = new PicolBlockGroup('Theme blocks', 'Miller Wittman');
 
         $blocks->addBlock('home-hero', 'Home Hero');
         $blocks->addBlock('home-intro', 'Home Intro');
         $blocks->addBlock('work-preview', 'Work Preview');
         $blocks->addBlock('testimonials', 'Testimonials');
         $blocks->addBlock('work-hero', 'Work Post Hero');
+        $blocks->addBlock('image-grid', 'Image Grid');
         // DONE
         $blocks->addBlock('page-hero', 'Page Hero');
         $blocks->addBlock('two-column-text', 'Two-column Text');

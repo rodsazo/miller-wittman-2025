@@ -1,0 +1,19 @@
+.imageGrid{
+  display: grid;
+  gap: 24px;
+
+  &__item{
+    aspect-ratio: 1.777;
+
+    &.full-width{
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media screen and (min-width: $bp-tablet){
+    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+}
