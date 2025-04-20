@@ -1,0 +1,6 @@
+<?php
+openBlock();
+?>
+
+<?php
+closeBlock();

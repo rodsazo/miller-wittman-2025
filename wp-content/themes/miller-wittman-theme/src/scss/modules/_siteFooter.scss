@@ -77,6 +77,10 @@
       padding-top: 64px;
       display: flex;
       justify-content: space-between;
+
+      a:hover{
+        color: $color-red;
+      }
     }
   }
 }
