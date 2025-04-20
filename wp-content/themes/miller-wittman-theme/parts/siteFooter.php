@@ -1,14 +1,19 @@
+<?php
+$contact_email = get_field('contact_email', 'options');
+?>
 <div class="siteFooter">
 
     <div class="container">
         <div class="siteFooter__top">
             <h5 class="h-2">Let's Talk</h5>
-            <a class="siteFooter__cta" href="#">
-                <span>Email Us</span>
-                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M30.1148 46.1147L33.8855 49.8854L51.7708 32.0001L33.8855 14.1147L30.1148 17.8854L41.5628 29.3334H16.0001V34.6667H41.5628L30.1148 46.1147Z" fill="#AB1A2D"/>
-                </svg>
-            </a>
+            <?php if( $contact_email ): ?>
+                <a class="siteFooter__cta" href="mailto:<?php echo $contact_email ; ?>">
+                    <span>Email Us</span>
+                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.1148 46.1147L33.8855 49.8854L51.7708 32.0001L33.8855 14.1147L30.1148 17.8854L41.5628 29.3334H16.0001V34.6667H41.5628L30.1148 46.1147Z" fill="#AB1A2D"/>
+                    </svg>
+                </a>
+            <?php endif; ?>
         </div>
 
         <div class="siteFooter__bottom">
@@ -16,15 +21,20 @@
                 <h5 class="text-cap-height">Miller Wittman</h5>
                 <div class="text-cap-height">Minneapolis, MN</div>
                 <div class="text-cap-height">(612) 991-0229</div>
-                <div class="text-cap-height">
-                    <a href="mailto:info@millerwittman.com">info@millerwittman.com</a>
-                </div>
+                <?php if( $contact_email ): ?>
+                    <div class="text-cap-height">
+                        <a href="mailto:<?php echo $contact_email; ?>">
+                            <?php echo $contact_email; ?>
+                        </a>
+                    </div>
+                <?php endif; ?>
             </address>
 
-            <form method="POST" action="#">
+            <form method="POST" action="//millerwittman.us16.list-manage.com/subscribe/post?u=8a381db55e7ae148c1382c960&id=5eb9be3e00">
                 <strong>Subscribe for updates</strong>
                 <div class="siteFooter__subscribe">
                     <input class="siteFooter__textInput" placeholder="Enter email" type="email" name="EMAIL" />
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8a381db55e7ae148c1382c960_5eb9be3e00" tabindex="-1" value=""></div>
                     <button type="submit">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15.0573 23.0571L16.9427 24.9425L25.8853 15.9998L16.9427 7.05713L15.0573 8.94246L20.7813 14.6665H8V17.3331H20.7813L15.0573 23.0571Z" fill="#121921"/>
