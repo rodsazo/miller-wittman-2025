@@ -14,16 +14,24 @@
   }
 
   &__slide{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    @if not( $is-gutenberg ) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: none;
 
-    display: none;
-
-    &:first-child{
-      display: block;
+      &:first-child{
+        display: block;
+      }
     }
+
+    @if( $is-gutenberg ){
+      + .testimonials__slide{
+        marign-top: 40px;
+      }
+    }
+
   }
 
   &__layout{

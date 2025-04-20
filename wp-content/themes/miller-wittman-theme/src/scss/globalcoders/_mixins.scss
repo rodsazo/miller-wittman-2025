@@ -3,34 +3,6 @@ MIXINS
 */
 $base-font-size : 18px !default;
 
-@function div( $a, $b ) {
-  @return math.div($a, $b);
-}
-
-@function em($size, $base: $base-font-size) {
-  @return div($size * 1px , $base) * 1em;
-}
-@mixin emfont( $size, $line_height : $size, $base: $base-font-size ) {
-  font-size: em($size, $base);
-  line-height: div($line_height,$size);
-}
-
-@function rem($size, $base: $base-font-size) {
-  @return div($size * 1px , $base) * 1rem;
-}
-@mixin remfont( $size, $line_height : $size, $base: $base-font-size ) {
-  font-size: rem($size, $base);
-  line-height: div($line_height,$size);
-}
-
-@function vwsize( $size ) {
-  @return (div($size , 1400) * 100vw);
-}
-
-@mixin gridColumns( $columns ) {
-  grid-template-columns: repeat( #{$columns}, 1fr );
-}
-
 /* EJEMPLO:
 strong{
   // alt A: Tenemos un elemento con 36px de font size y 40px de line-height

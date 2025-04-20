@@ -12,17 +12,19 @@
         </div>
 
         <div class="siteFooter__bottom">
-            <address>
-                <h5>Miller Wittman</h5>
-                Minneapolis, MN<br />
-                (612) 991-0229<br />
-                <a href="mailto:info@millerwittman.com">info@millerwittman.com</a>
+            <address class="flow flow--tight">
+                <h5 class="text-cap-height">Miller Wittman</h5>
+                <div class="text-cap-height">Minneapolis, MN</div>
+                <div class="text-cap-height">(612) 991-0229</div>
+                <div class="text-cap-height">
+                    <a href="mailto:info@millerwittman.com">info@millerwittman.com</a>
+                </div>
             </address>
 
-            <form>
+            <form method="POST" action="#">
                 <strong>Subscribe for updates</strong>
                 <div class="siteFooter__subscribe">
-                    <input type="email" name="EMAIL" />
+                    <input class="siteFooter__textInput" placeholder="Enter email" type="email" name="EMAIL" />
                     <button type="submit">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15.0573 23.0571L16.9427 24.9425L25.8853 15.9998L16.9427 7.05713L15.0573 8.94246L20.7813 14.6665H8V17.3331H20.7813L15.0573 23.0571Z" fill="#121921"/>

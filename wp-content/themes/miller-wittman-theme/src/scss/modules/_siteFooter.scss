@@ -20,6 +20,45 @@
     transform-origin: left center;
   }
 
+  &__bottom{
+    padding-top: 40px;
+  }
+
+  &__subscribe{
+    position: relative;
+    margin-top: 20px;
+
+    button[type=submit]{
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 56px;
+      width: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__textInput{
+    height: 56px;
+    line-height: 50px;
+    border: 3px solid;
+    width: 290px;
+    font-size: 16px;
+    padding: 0 72px 0 16px;
+    outline: none;
+    transition: all 0.4s ease;
+
+    &:focus{
+      border-color: $color-red;
+    }
+
+    &::placeholder{
+      color: #8A9199;
+    }
+  }
+
   @media screen and (min-width: $bp-tablet){
     padding: 160px 0 85px;
 
@@ -32,6 +71,12 @@
 
     &__cta{
       transform: scale(1);
+    }
+
+    &__bottom{
+      padding-top: 64px;
+      display: flex;
+      justify-content: space-between;
     }
   }
 }

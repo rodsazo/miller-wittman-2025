@@ -8,7 +8,7 @@ module.exports = {
     },
 
     css : {
-        sources: './src/scss/**/style.scss',
+        sources: './src/scss/**/*.scss',
         destination: './assets/css',
         modules_dir : './src/scss/modules/',
         modules_index : './src/scss/_modules-index.scss'
