@@ -1,0 +1,45 @@
+.pageHero{
+  background: $color-coal;
+  padding-top: 80vw;
+  padding-bottom: 10vw;
+
+  &__image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70vw;
+  }
+
+  @media screen and (min-width: $bp-laptop--small){
+    padding: 0;
+    height: clamp(500px, 50vw, 730px);
+
+    .container{
+      height: 100%;
+    }
+
+    &__main{
+      display: flex;
+      height: 100%;
+      align-items: flex-end;
+      max-width: min(840px, 54%);
+      padding-bottom: 27px;
+    }
+
+    &__image{
+      width: auto;
+      height: auto;
+      left: calc(50% + 180px);
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    @media screen and (min-width: $bp-laptop--large){
+      &__main{
+        padding-bottom: 39px;
+      }
+    }
+  }
+}
