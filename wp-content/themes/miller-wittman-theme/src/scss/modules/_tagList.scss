@@ -1,0 +1,7 @@
+.tagList{
+  &__item{
+    @include f_soehne;
+    line-height: 1.2;
+    font-size: 32px;
+  }
+}

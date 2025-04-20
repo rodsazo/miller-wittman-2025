@@ -1,0 +1,15 @@
+@at-root :root{
+  --cols-columns: 1fr 1fr;
+}
+.cols{
+  display: grid;
+  gap: 40px;
+
+  &--3-4{
+    --cols-columns: 5fr 7fr;
+  }
+
+  @media screen and (min-width: $bp-tablet){
+    grid-template-columns: var(--cols-columns);
+  }
+}

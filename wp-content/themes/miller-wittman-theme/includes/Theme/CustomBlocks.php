@@ -11,8 +11,9 @@ class CustomBlocks{
         $blocks->addBlock('home-hero', 'Home Hero');
         $blocks->addBlock('home-intro', 'Home Intro');
         $blocks->addBlock('work-preview', 'Work Preview');
-        // DONE
         $blocks->addBlock('testimonials', 'Testimonials');
+        $blocks->addBlock('work-hero', 'Work Post Hero');
+        // DONE
         $blocks->addBlock('page-hero', 'Page Hero');
         $blocks->addBlock('two-column-text', 'Two-column Text');
         $blocks->addBlock('two-column-images', 'Two-column Images');

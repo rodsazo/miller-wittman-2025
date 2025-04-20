@@ -18,17 +18,36 @@ $is_editor : false !default;
     font-size: 16px;
   }
 
+  &--large{
+    --body-font-size: 20px;
+    @media screen and (min-width: $bp-tablet){
+      --body-font-size: 40px;
+    }
+  }
+
   &--tight{
     --wpContent-li-space: 0;
   }
 
   p{
     margin: calc((var(--body-line-height) - 1) * -0.5em) 0;
+    letter-spacing: -0.01em;
   }
 
   h2, h3, h4, h5, h6{
+    @include f_display;
     &:not(:first-child){
       padding-top: var(--wpContent-heading-space);
+    }
+  }
+
+  h2{
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+
+    @media screen and (min-width: $bp-tablet){
+      font-size: 48px;
     }
   }
 

@@ -1,0 +1,16 @@
+.workHero{
+  &__thumbnail{
+    position: relative;
+    aspect-ratio: 1.7;
+    margin-bottom: 80px;
+  }
+  &__header{
+    padding-bottom: 40px;
+    border-bottom: 4px solid;
+  }
+  &__title{
+    @include f_soehne;
+    font-size: clamp(48px, 7.42vw, 104px );
+    line-height: 1;
+  }
+}

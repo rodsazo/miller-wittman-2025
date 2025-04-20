@@ -1,5 +1,5 @@
 <?php
-$terms = wp_get_post_terms( $post->ID, \Theme\CustomTaxonomies::TAX_WORK_CAT );
+$terms = wp_get_post_terms( get_the_ID(), \Theme\CustomTaxonomies::TAX_WORK_CAT );
 ?>
 <div class="workGrid__item flow flow--small">
 
@@ -10,13 +10,8 @@ $terms = wp_get_post_terms( $post->ID, \Theme\CustomTaxonomies::TAX_WORK_CAT );
     </a>
 
     <?php if( count($terms) ): ?>
-        <div class="workGrid__terms text-cap-height">
-            <?php while( $term = array_shift($terms) ): ?>
-                <span><?php echo $term->name; ?></span>
-                <?php if( count($terms) ): ?>
-                    •
-                <?php endif; ?>
-            <?php endwhile; ?>
+        <div class="workGrid__terms">
+            <?php part('term-list', ['terms' => $terms]); ?>
         </div>
     <?php endif; ?>
 

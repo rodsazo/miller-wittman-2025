@@ -1,14 +1,26 @@
 @at-root :root{
   --container-padding-sides: 48px;
 
+  --m-80: 80px;
+  --m-96: 96px;
+  --m-128: 128px;
+
   @media screen and (max-width: $bp-laptop--small){
     --container-padding-sides: 20px;
+
+    --m-80: 64px;
+    --m-96: 72px;
+    --m-128: 96px;
   }
 
   @media screen and (max-width: $bp-tablet--small){
     --container-padding-sides: 20px;
+
+    --m-80: 60px;
+    --m-96: 64px;
   }
 }
+
 .container{
   max-width: $container-width;
   padding: 0 var(--container-padding-sides);
@@ -49,3 +61,12 @@
 .page-container{
   position: relative;
 }
+
+.mt-80{ margin-top: var(--m-80); }
+.mb-80{ margin-bottom: var(--m-80); }
+
+.mt-96{ margin-top: var(--m-96); }
+.mb-96{ margin-bottom: var(--m-96); }
+
+.mt-128{ margin-top: var(--m-128); }
+.mb-128{ margin-bottom: var(--m-128); }
