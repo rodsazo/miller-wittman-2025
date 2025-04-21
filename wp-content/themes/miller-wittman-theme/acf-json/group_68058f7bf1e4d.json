@@ -136,8 +136,8 @@
                 "id": ""
             },
             "choices": {
-                "dates": "Dates",
-                "heading": "Large heading"
+                "heading": "Large heading",
+                "dates": "Dates"
             },
             "default_value": "",
             "return_format": "value",
@@ -305,5 +305,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745195100
+    "modified": 1745196173
 }

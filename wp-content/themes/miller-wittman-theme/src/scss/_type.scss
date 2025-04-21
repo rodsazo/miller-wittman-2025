@@ -78,9 +78,11 @@
     transition: color 0.2s ease;
     @content;
 
-    a:hover{
+    a:hover,
+    strong{
       color: var(--color-accent);
     }
+
   }
 }
 
