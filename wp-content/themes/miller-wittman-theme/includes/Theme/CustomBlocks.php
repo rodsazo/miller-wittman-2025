@@ -16,10 +16,12 @@ class CustomBlocks{
         $blocks->addBlock('image-grid', 'Image Grid');
         $blocks->addBlock('page-hero', 'Page Hero');
         $blocks->addBlock('basic-text', 'Text Block');
-        // DONE
-        $blocks->addBlock('two-column-text', 'Two-column Text');
-        $blocks->addBlock('two-column-images', 'Two-column Images');
         $blocks->addBlock('work', 'Work Page');
+        $blocks->addBlock('two-column-text', 'Two-column Text');
+        // DONE
+        $blocks->addBlock('accordions', 'Accordions');
+        $blocks->addBlock('team', 'Accordions');
+        $blocks->addBlock('logo-carousel', 'Logo Carousel');
         $blocks->addBlock('insights', 'Insights Page');
 
         /*

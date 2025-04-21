@@ -1,0 +1,21 @@
+.dateRange{
+  @include f_soehne;
+  --color-headings: #F5F5F5;
+
+  @media screen and (min-width: $bp-tablet){
+    text-align: right;
+    position: relative;
+    z-index: -1;
+    right: calc(var(--container-padding-sides) * -1);
+    margin-top: 24px;
+
+    &__nowrap{
+      white-space: nowrap;
+    }
+  }
+
+  @media screen and (min-width: 1600px){
+    right: -167px;
+  }
+
+}

@@ -13,7 +13,20 @@
     --cols-columns: 4fr 8fr;
   }
 
+  &--8-4{
+    --cols-columns: 8fr 4fr;
+  }
+
   @media screen and (min-width: $bp-tablet){
     grid-template-columns: var(--cols-columns);
+
+    &.reversed{
+      > :nth-child(1){
+        order: 2;
+      }
+      > :nth-child(2){
+        order: 1;
+      }
+    }
   }
 }
