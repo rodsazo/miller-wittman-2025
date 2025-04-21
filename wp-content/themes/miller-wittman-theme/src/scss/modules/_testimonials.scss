@@ -64,6 +64,14 @@
     @include f_soehne;
     font-size: 48px;
     line-height: 1;
+
+    a{
+      text-decoration: underline;
+
+      &:hover{
+        color: $color-red;
+      }
+    }
   }
 
   &__meta{

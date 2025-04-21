@@ -26,6 +26,7 @@ $slider_id = 's' . uniqid();
                     $author_name = $item['author_name'];
                     $job_title = $item['job_title'];
                     $institution = $item['institution'];
+                    $linkedin = $item['linkedin'] ?? false;
 
                     ?>
                     <div class="testimonials__slide" data-p-slider="<?php echo $slider_id; ?>__slide">
@@ -46,7 +47,13 @@ $slider_id = 's' . uniqid();
                                 <div class="testimonials__authorData flow flow--tight">
 
                                     <div class="testimonials__authorName heading-cap-height">
-                                        <?php echo $author_name; ?>
+                                        <?php if( $linkedin ): ?>
+                                            <a href="<?php echo $linkedin; ?>" target="_blank">
+                                                <?php echo $author_name; ?>
+                                            </a>
+                                        <?php else: ?>
+                                            <?php echo $author_name; ?>
+                                        <?php endif; ?>
                                     </div>
 
                                     <?php if( $job_title ): ?>
