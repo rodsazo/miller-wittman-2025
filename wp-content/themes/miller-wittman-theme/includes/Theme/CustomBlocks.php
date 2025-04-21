@@ -18,10 +18,10 @@ class CustomBlocks{
         $blocks->addBlock('basic-text', 'Text Block');
         $blocks->addBlock('work', 'Work Page');
         $blocks->addBlock('two-column-text', 'Two-column Text');
+        $blocks->addBlock('logo-carousel', 'Logo Carousel');
         // DONE
         $blocks->addBlock('accordions', 'Accordions');
-        $blocks->addBlock('team', 'Accordions');
-        $blocks->addBlock('logo-carousel', 'Logo Carousel');
+        $blocks->addBlock('team', 'Team');
         $blocks->addBlock('insights', 'Insights Page');
 
         /*

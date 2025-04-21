@@ -1,0 +1,89 @@
+.accordions{
+  padding: var(--m-96) 0;
+  background: $color-beige;
+
+  &__header{
+    padding-top: 64px;
+    border-top: 4px solid;
+  }
+
+  &__list{
+    border-top: 1px solid;
+    margin-top: var(--m-128);
+  }
+
+  &__item{
+    border-bottom: 1px solid;
+    padding: 25px 0;
+
+    &.open{
+      .accordions__plus span:nth-child(2){
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__handle{
+    cursor: pointer;
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover{
+      color: var(--color-accent);
+    }
+  }
+
+  &__title{
+    @include f_soehne;
+    font-size: 80px;
+  }
+
+  &__plus{
+    display: flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 100%;
+    border: 1px solid;
+
+    span{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 18px;
+      height: 3px;
+      margin-left: -9px;
+      margin-top: -1.5px;
+      display: block;;
+      background: currentColor;
+      transition: all 0.2s ease;
+
+      &:nth-child(2){
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__content{
+    padding-top: 12px;
+    display: none;
+
+    .wpContent{
+      max-width: 820px;
+    }
+  }
+
+
+  @media screen and (min-width: $bp-tablet){
+    &__plus{
+      width: 56px;
+      height: 56px;
+    }
+  }
+
+}
