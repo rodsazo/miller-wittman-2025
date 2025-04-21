@@ -1,0 +1,82 @@
+.insights{
+  &__header{
+    background: $color-red;
+    color: white;
+    --color-headings: white;
+    padding: var(--m-128) 0;
+
+    .h-1{
+      line-height: 1.1;
+    }
+  }
+
+  &__intro{
+    margin: 24px 0 0 auto;
+    max-width: 540px;
+    text-align: right;
+
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -0.025em;
+  }
+
+  &__body{
+    margin-top: calc(24px - var(--m-128));
+  }
+
+  &__image{
+    display: block;
+    aspect-ratio: 1.33;
+  }
+
+  &__featured{
+    display: grid;
+    gap: 24px;
+    margin-bottom: var(--m-96);
+  }
+
+  &__featuredTitle{
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: -0.05em;
+    @include f_display;
+  }
+
+  &__grid{
+    display: grid;
+    gap: 24px;
+  }
+
+  &__title{
+    @include f_display;
+    font-size: 32px;
+    letter-spacing: -0.04em;
+    line-height: 1.2;
+  }
+
+  @media screen and (min-width: $bp-tablet){
+    &__intro{
+      font-size: 24px;
+    }
+
+    &__featured{
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: flex-end;
+    }
+    &__featuredTitle{
+      font-size: 48px;
+    }
+
+    &__grid{
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+  }
+
+  @media screen and (min-width: $bp-laptop--small){
+    &__grid{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

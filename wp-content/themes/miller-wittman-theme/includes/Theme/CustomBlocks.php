@@ -20,8 +20,8 @@ class CustomBlocks{
         $blocks->addBlock('two-column-text', 'Two-column Text');
         $blocks->addBlock('logo-carousel', 'Logo Carousel');
         $blocks->addBlock('accordions', 'Accordions');
-        // DONE
         $blocks->addBlock('team', 'Team');
+        // DONE
         $blocks->addBlock('insights', 'Insights Page');
 
         /*
