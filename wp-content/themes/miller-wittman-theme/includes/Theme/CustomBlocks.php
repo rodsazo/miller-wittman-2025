@@ -15,6 +15,7 @@ class CustomBlocks{
         $blocks->addBlock('work-hero', 'Work Post Hero');
         $blocks->addBlock('image-grid', 'Image Grid');
         $blocks->addBlock('page-hero', 'Page Hero');
+        $blocks->addBlock('basic-text', 'Text Block');
         // DONE
         $blocks->addBlock('two-column-text', 'Two-column Text');
         $blocks->addBlock('two-column-images', 'Two-column Images');
@@ -22,24 +23,6 @@ class CustomBlocks{
         $blocks->addBlock('insights', 'Insights Page');
 
         /*
-         * WORK DETAIL PAGE
-         *
-         * Work Header
-         * - Title
-         * - Subtitle
-         * - Image
-         *
-         * Work Content
-         * - Tags
-         * - Text
-         * - Gallery
-         * - Mini Quote
-         * - More Work
-         *
-         * Page Header
-         * - Text
-         * - Image
-         *
          * Basic text
          * - Heading
          * - Lede

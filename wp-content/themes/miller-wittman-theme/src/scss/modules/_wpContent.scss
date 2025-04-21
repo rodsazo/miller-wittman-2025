@@ -20,6 +20,7 @@ $is_editor : false !default;
 
   &--large{
     --body-font-size: 20px;
+    gap: 40px;
     @media screen and (min-width: $bp-tablet){
       --body-font-size: 40px;
     }
@@ -44,7 +45,8 @@ $is_editor : false !default;
   h2{
     font-size: 36px;
     line-height: 1.2;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
+    margin: -0.3em 0;
 
     @media screen and (min-width: $bp-tablet){
       font-size: 48px;

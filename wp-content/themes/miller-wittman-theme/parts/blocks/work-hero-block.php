@@ -24,7 +24,7 @@ $content = get_field('content');
         <?php endif; ?>
     </header>
 
-    <div class="mt-80 mb-96 cols cols--3-4">
+    <div class="mt-80 mb-96 cols cols--5-7">
         <div>
             <div class="tagList flow flow--tight">
                 <?php foreach( $tags as $one_tag ): ?>

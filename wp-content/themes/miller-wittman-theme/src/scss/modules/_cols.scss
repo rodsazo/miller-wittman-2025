@@ -5,8 +5,12 @@
   display: grid;
   gap: 40px;
 
-  &--3-4{
+  &--5-7{
     --cols-columns: 5fr 7fr;
+  }
+
+  &--4-8{
+    --cols-columns: 4fr 8fr;
   }
 
   @media screen and (min-width: $bp-tablet){
