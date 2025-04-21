@@ -23,8 +23,6 @@
         document.addEventListener('alpine:init', function(){ Alpine.prefix('data-x-') })
     </script>
 
-    <script src="<?php echo TEMPLATE_URL; ?>/assets/js/alpine.plugins.js" defer></script>
-    <script src="<?php echo TEMPLATE_URL; ?>/assets/js/alpine.js" defer></script>
 
 </head>
 

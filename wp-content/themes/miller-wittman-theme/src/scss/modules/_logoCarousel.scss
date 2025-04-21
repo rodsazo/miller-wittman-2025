@@ -1,0 +1,35 @@
+.logoCarousel{
+
+  &__marqueeContainer{
+    margin-left: -100vw;
+    position: relative;
+    z-index: 1;
+  }
+  &__marquee{
+    animation: marquee var(--marquee-scroll-duration) linear infinite;
+  }
+  &__marqueeContent{
+    white-space: nowrap;
+    font-size: 0;
+  }
+  &__item{
+    display: inline-block;
+    margin-left: 24px;
+    position: relative;
+    width: 351px;
+    height: 207px;
+    user-select: none;
+
+    img{
+      position: absolute;
+      top: 38px;
+      left: 38px;
+      height: 131px;
+      width: 275px;
+      object-fit: contain;
+      object-position: center center;
+    }
+
+  }
+
+}
