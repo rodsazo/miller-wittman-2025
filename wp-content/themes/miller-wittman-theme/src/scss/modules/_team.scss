@@ -1,3 +1,107 @@
+@at-root :root{
+  --team-columns: 4fr 6fr;
+  --team-image-order: 1;
+  --team-content-order: 2;
+}
 .team{
+  padding: var(--m-96) 0;
+  background: $color-coal;
 
+  &__layout{
+    display: grid;
+    gap: 40px;
+  }
+
+  &__sectionTitle{
+    color: #30373F;
+  }
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+    gap: var(--m-128);
+  }
+
+  &__member{
+    display: grid;
+    gap: 40px;
+  }
+
+  &__image{
+    position: relative;
+    aspect-ratio: 0.8;
+    max-width: 400px;
+    width: auto;
+  }
+
+  &__name{
+    line-height: 1;
+    @include f_soehne;
+    font-size: 64px;
+  }
+
+  &__bio{
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -0.025em;
+  }
+
+  &__cta{
+
+    a{
+      text-transform: uppercase;
+      font-weight: bold;
+      border-bottom: 2px solid $color-red;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  @media screen and (min-width: $bp-tablet){
+    &__member{
+      display: grid;
+      grid-template-columns: var(--team-columns);
+
+      &:nth-child(2n) {
+        --team-columns: 6fr 4fr;
+        --team-image-order: 2;
+        --team-content-order: 1;
+      }
+    }
+
+    &__image{
+      order: var(--team-image-order);
+    }
+    &__content{
+      order: var(--team-content-order);
+    }
+
+    &__name{
+      font-size: 80px;
+    }
+
+    &__bio{
+      font-size: 24px;
+    }
+  }
+
+
+  @media screen and (min-width: $bp-laptop){
+    &__layout{
+      display: grid;
+      grid-template-columns: 180px 1fr;
+    }
+    &__header{
+      position: relative;
+      width: 180px;
+    }
+    &__sectionTitle{
+      position: absolute;
+      right: 0;
+      top: 22px;
+      white-space: nowrap;
+      transform-origin: top right;
+      transform: rotate(-90deg) translateY(-100%);
+
+    }
+  }
 }

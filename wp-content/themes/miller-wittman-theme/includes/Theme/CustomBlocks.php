@@ -19,33 +19,13 @@ class CustomBlocks{
         $blocks->addBlock('work', 'Work Page');
         $blocks->addBlock('two-column-text', 'Two-column Text');
         $blocks->addBlock('logo-carousel', 'Logo Carousel');
-        // DONE
         $blocks->addBlock('accordions', 'Accordions');
+        // DONE
         $blocks->addBlock('team', 'Team');
         $blocks->addBlock('insights', 'Insights Page');
 
         /*
-         * Basic text
-         * - Heading
-         * - Lede
-         * - Text
-         * - CTA
-         *
-         * Service accordion
-         * - Title
-         * - Text
-         * - Services
-         *
-         * Media Text Date
-         * - Eyebrow
-         * - Lede
-         * - Text
-         * - Dates
-         *
-         * Two Col Image
-         * - Colored heading and text
-         * - Logo reel
-         * - Members
+         * Team
          *
          * Insights
          *
