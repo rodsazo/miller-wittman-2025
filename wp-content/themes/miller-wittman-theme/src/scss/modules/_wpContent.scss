@@ -47,7 +47,7 @@ $is_editor : false !default;
     font-size: 36px;
     line-height: 1.2;
     letter-spacing: -0.025em;
-    margin: -0.3em 0;
+    margin: -0.25em 0;
 
     @media screen and (min-width: $bp-tablet){
       font-size: 48px;
@@ -155,14 +155,24 @@ $is_editor : false !default;
     line-height: 1.25;
   }
 
-  &--full{
-    --wpContent-li-space: 1em;
+  hr{
+    border: 2px solid $color-coal;
+    margin: 13px 0;
   }
 
   img{
     max-width: 100%;
     height: auto;
   }
+
+  &--full{
+    --wpContent-li-space: 1em;
+  }
+
+  &--single{
+    h2{ color: $color-red; }
+  }
+
 }
 
 @if( $is_editor ) {

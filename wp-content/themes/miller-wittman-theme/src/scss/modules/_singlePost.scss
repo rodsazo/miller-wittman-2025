@@ -1,0 +1,26 @@
+.singlePost{
+  margin-top: var(--m-96);
+  display: grid;
+  gap: 24px;
+
+  &__image{
+    aspect-ratio: 1.33;
+  }
+
+  &__header{
+    border-bottom: 4px solid;
+    padding-bottom: 40px;
+  }
+
+  &__content{
+    margin-top: 60px;
+    padding-bottom: var(--m-96);
+  }
+
+
+
+  @media screen and (min-width: $bp-tablet){
+    grid-template-columns: 4fr 8fr;
+    gap: 40px;
+  }
+}
