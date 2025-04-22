@@ -18,7 +18,7 @@ $contact_email = get_field('contact_email', 'options');
 
         <div class="siteFooter__bottom">
             <address class="flow flow--tight">
-                <h5 class="text-cap-height">Miller Wittman</h5>
+                <h5 class="text-cap-height"><strong>Miller Wittman</strong></h5>
                 <div class="text-cap-height">Minneapolis, MN</div>
                 <div class="text-cap-height">(612) 991-0229</div>
                 <?php if( $contact_email ): ?>
