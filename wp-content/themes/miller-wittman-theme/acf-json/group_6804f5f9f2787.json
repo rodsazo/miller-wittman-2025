@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_6804f624e4716",
-            "label": "Tags",
+            "label": "Highlights",
             "name": "tags",
             "aria-label": "",
             "type": "textarea",
@@ -63,5 +63,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745155657
+    "modified": 1745351560
 }
