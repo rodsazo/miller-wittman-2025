@@ -291,7 +291,8 @@ class PicolPostType {
             'show_in_rest' => $this->use_gutenberg,
 
             'rewrite' => array(
-                'slug' => $this->_slug
+                'slug' => $this->_slug,
+                'with_front' => false
             ),
 
             'taxonomies' => $this->taxonomies,
