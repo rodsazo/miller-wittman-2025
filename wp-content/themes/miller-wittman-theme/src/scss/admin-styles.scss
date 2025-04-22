@@ -8,6 +8,13 @@
 @import 'admin/adminMenuItems';
 @import 'admin/adminTheme';
 
+#categorydiv{
+  display: none !important;
+}
+#tagsdiv-post_tag{
+  display: none !important;
+}
+
 /*
 Otros estilos
 */
