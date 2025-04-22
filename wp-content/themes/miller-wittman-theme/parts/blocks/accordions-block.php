@@ -16,9 +16,7 @@ $accordions = get_field('accordions') ?: [];
                 </div>
                 <div>
                     <div class="wpContent wpContent--large">
-                        <p>
-                            <?php echo $text; ?>
-                        </p>
+                        <?php echo $text; ?>
                     </div>
                 </div>
             </div>
