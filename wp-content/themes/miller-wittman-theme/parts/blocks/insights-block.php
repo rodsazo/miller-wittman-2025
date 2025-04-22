@@ -55,11 +55,16 @@ if( !$featured_post ) {
 
         <div class="insights__grid">
 
-            <?php foreach( $posts as $post ): setup_postdata( $post )?>
+            <?php foreach( $posts as $post ):
+                setup_postdata( $post );
+                $thumb_id = get_post_thumbnail_id( $post->ID );
+                ?>
                 <div class="insights__item flow flow--small">
-                    <a class="insights__image u-of" href="<?php the_permalink(); ?>">
-                        <?php the_post_thumbnail('medium_large'); ?>
-                    </a>
+                    <?php if( $thumb_id ): ?>
+                        <a class="insights__image u-of" href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail('medium_large'); ?>
+                        </a>
+                    <?php endif; ?>
                     <h3 class="insights__title | heading-cap-height">
                         <a href="<?php the_permalink(); ?>">
                             <?php the_title(); ?>
