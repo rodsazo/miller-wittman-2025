@@ -15,7 +15,7 @@ foreach ($highlights as $one_highlight) {
 ?>
 
 <div class="container">
-    <div class="homeHero">
+    <div class="homeHero" data-scrollvars>
 
         <h1 class="homeHero__text">
             <?php echo $text; ?>

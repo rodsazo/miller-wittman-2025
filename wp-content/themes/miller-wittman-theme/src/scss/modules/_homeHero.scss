@@ -12,6 +12,7 @@
     background: var(--bg-image);
     background-clip: text;
     color: transparent;
-    background-size: cover;
+    background-size: 300% 300%;
+    background-position: 50% calc(25% + var(--scrollvar) * 50% );
   }
 }
