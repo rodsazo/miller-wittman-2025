@@ -129,6 +129,14 @@ $header_bg = get_field('header_background');
                 ?>
             </div>
 
+            <button class="siteHeader__mobBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
         </div>
     </div>
 </div>
+
+<div class="siteHeader__spacer"></div>

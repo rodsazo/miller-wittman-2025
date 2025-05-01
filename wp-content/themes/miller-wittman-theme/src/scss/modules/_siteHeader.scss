@@ -1,7 +1,31 @@
+@at-root :root{
+  --siteHeader-height: 88px;
+  --siteHeader-spacer: var(--siteHeader-height);
+
+  --siteHeader-x-gap: 30px;
+  --siteHeader-bg: white;
+
+  @media screen and (max-width: $bp-laptop--small){
+    --siteHeader-height: 64px;
+  }
+}
+
 .siteHeader{
 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.4s ease;
+  z-index: 9999;
+  background: var(--siteHeader-bg);
+
+  &__spacer{
+    height: var(--siteHeader-spacer);
+  }
+
   &__layout{
-    height: 88px;
+    height: var(--siteHeader-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,12 +47,45 @@
     }
   }
 
-  &--dark{
-    background: $color-coal;
+  &--dark:not(.sticky){
     color: white;
+    --siteHeader-bg: #{$color-coal};
 
     .siteHeader__logoText{
       fill: white;
     }
+  }
+
+  @at-root html.sticky-menu{
+    --siteHeader-height: 64px;
+  }
+
+  @at-root html.sticky-menu &{
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    transform: translateY(-50%);
+    pointer-events: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+    &.in{
+      pointer-events: auto;
+      opacity: 1;
+      transform: translateY(0);
+      animation: stickyIn 0.4s ease;
+    }
+
+  }
+}
+
+
+@keyframes stickyIn {
+  from{
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
   }
 }
