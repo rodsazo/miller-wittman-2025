@@ -12,7 +12,6 @@ jQuery( function ($){
     });
 
     $('.intersect').each(function(i,el){
-        const $this = $(el);
         observer.observe( el );
     });
 });
