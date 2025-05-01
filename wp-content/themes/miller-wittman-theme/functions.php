@@ -120,6 +120,11 @@ function the_button ( $link, $style = 'primary')
 {
     ?>
     <a class="btn btn--<?php echo $style; ?>" href="<?php echo $link['url']; ?>" <?php echo $link['target_attr']; ?>>
+        <span class="btn__arrow">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.05733 16.0573L8.94267 17.9426L17.8853 8.99992L8.94267 0.057251L7.05733 1.94258L12.7813 7.66658H0V10.3333H12.7813L7.05733 16.0573Z" fill="white"/>
+            </svg>
+        </span>
         <span class="btn__bubble">
             <?php echo $link['title']; ?>
         </span>
