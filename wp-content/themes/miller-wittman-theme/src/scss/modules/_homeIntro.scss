@@ -23,7 +23,7 @@
     font-size: 36px;
     line-height: 1;
     letter-spacing: -0.01em;
-    animation: homeIntro__text 1.5s ease-out;
+    animation-name: homeIntro__text;
   }
   &__cta{
     margin-top: 48px;
@@ -101,8 +101,8 @@
 
 @keyframes homeIntro__text {
   from{
-    transform: translateY(8vw);
-    line-height: 1.2;
+    transform: translateY(4vw);
+    line-height: 1.4;
     opacity: 0;
   }
   to{
