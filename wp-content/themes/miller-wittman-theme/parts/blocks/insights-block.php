@@ -38,11 +38,11 @@ if( !$featured_post ) {
             ?>
 
             <div class="insights__featured">
-                <a class="insights__image u-of" href="<?php the_permalink(); ?>">
+                <a class="insights__image u-of | intersect animation fadeInTop" href="<?php the_permalink(); ?>">
                     <?php the_post_thumbnail('medium_large'); ?>
                 </a>
 
-                <h2 class="insights__featuredTitle | heading-cap-height">
+                <h2 class="insights__featuredTitle | heading-cap-height | intersect animation fadeInTop">
                     <a href="<?php the_permalink(); ?>">
                         <?php the_title(); ?>
                     </a>
