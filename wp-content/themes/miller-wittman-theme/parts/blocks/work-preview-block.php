@@ -13,7 +13,7 @@ $work_posts = new WP_Query([
 
 <div class="workPreview | scheme--dark">
     <div class="container">
-        <h2 class="h-2"><?php echo $section_title; ?></h2>
+        <h2 class="workPreview__title h-2" data-scrollvars><?php echo $section_title; ?></h2>
 
         <div class="workGrid workPreview__grid">
             <?php while( $work_posts->have_posts()): $work_posts->the_post(); ?>

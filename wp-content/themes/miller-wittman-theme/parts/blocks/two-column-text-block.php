@@ -22,7 +22,7 @@ if( $type == 'dates' ) {
 ?>
 
 <div class="container mt-80 mb-80">
-    <div class="cols <?php echo $reversed_class; ?> <?php echo $cols_class; ?>">
+    <div class="cols <?php echo $reversed_class; ?> <?php echo $cols_class; ?>" data-scrollvars>
 
         <?php part('two-column-' . $type ); ?>
 

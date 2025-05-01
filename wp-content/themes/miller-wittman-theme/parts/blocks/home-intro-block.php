@@ -8,7 +8,7 @@ $link = get_link_params($link);
 
 ?>
 
-<div class="homeIntro scheme--dark">
+<div class="homeIntro scheme--dark" data-scrollvars>
     <?php if( $background_image ): ?>
         <div class="homeIntro__bg u-of">
             <?php echo wp_get_attachment_image( $background_image, 'large', false, ['alt' => '' , 'role' => 'decoration'] ) ?>

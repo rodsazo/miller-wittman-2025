@@ -3,11 +3,13 @@
   padding-top: clamp(60px, 27.65%, 240px);
   padding-bottom: clamp(45px, 26%, 60px);
   position: relative;
+  overflow: hidden;
 
   &__bg{
     position: absolute;
     inset: 0;
     opacity: 0.1;
+    transform: translateY( calc(20vw * var(--scrollvar) - 10vw) );
   }
 
   .container{

@@ -10,7 +10,7 @@ $team = get_field('team') ?: [];
 
         <div class="team__layout">
 
-            <div class="team__header">
+            <div class="team__header" data-scrollvars>
                 <h2 class="team__sectionTitle h-2"><?php echo $title; ?></h2>
             </div>
 
@@ -24,7 +24,7 @@ $team = get_field('team') ?: [];
                     $linkedin   = $one_member['linkedin'];
                     ?>
                     <div class="team__member">
-                        <div class="team__image u-of">
+                        <div class="team__image u-of" data-scrollvars>
                             <?php echo wp_get_attachment_image( $image, 'medium_large' ); ?>
                         </div>
 

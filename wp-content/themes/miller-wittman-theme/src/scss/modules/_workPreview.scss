@@ -3,6 +3,13 @@
   padding-bottom: clamp(96px, 1.1vw, 160px);
   background: $color-coal;
 
+
+  &__title{
+    position: relative;
+    z-index: 1;
+    transform: translateY(calc(60px - 120px * var(--scrollvar)));
+  }
+
   &__grid{
     margin-top: 60px;
   }
