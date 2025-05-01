@@ -6,7 +6,7 @@
   --siteHeader-bg: white;
 
   @media screen and (max-width: $bp-laptop--small){
-    --siteHeader-height: 64px;
+    --siteHeader-height: 72px;
   }
 }
 
@@ -47,6 +47,36 @@
     }
   }
 
+  &__mobBtn{
+    width: 36px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+
+    span{
+      transition: all 0.2s ease;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: currentColor;
+      position: relative;
+    }
+
+    &.active{
+      span:nth-child(1){
+        top: 11px;
+        transform: rotate(-45deg);
+      }
+      span:nth-child(2){
+        opacity: 0;
+      }
+      span:nth-child(3){
+        top: -11px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
   &--dark:not(.sticky){
     color: white;
     --siteHeader-bg: #{$color-coal};
@@ -56,8 +86,17 @@
     }
   }
 
+  @media screen and (max-width: $bp-desktop){
+    &__nav{
+      display: none;
+    }
+    &__mobBtn{
+      display: flex;
+    }
+  }
+
   @at-root html.sticky-menu{
-    --siteHeader-height: 64px;
+    --siteHeader-height: 72px;
   }
 
   @at-root html.sticky-menu &{
