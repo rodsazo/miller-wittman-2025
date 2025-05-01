@@ -15,7 +15,6 @@
   &__sectionTitle{
     color: #30373F;
     position: relative;
-    transform: translateY( calc(60px - 120px * var(--scrollvar)) );
   }
 
   &__list{
@@ -72,7 +71,6 @@
 
     &__image{
       order: var(--team-image-order);
-      transform: translateY(calc( 60px * var(--scrollvar)));
     }
     &__content{
       order: var(--team-content-order);
@@ -103,7 +101,7 @@
       top: 22px;
       white-space: nowrap;
       transform-origin: top right;
-      transform: rotate(-90deg) translateY(-100%) translateX( calc(60px - 240px * var(--scrollvar)) );
+      transform: rotate(-90deg) translateY(-100%);
 
     }
   }

@@ -18,7 +18,7 @@ if( !$featured_post ) {
 ?>
 
 
-<div class="insights__header" data-scrollvars>
+<div class="insights__header">
     <div class="container">
         <h1 class="h-1">
             <?php echo $title; ?>
