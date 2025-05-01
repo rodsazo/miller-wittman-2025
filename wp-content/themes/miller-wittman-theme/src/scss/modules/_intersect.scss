@@ -1,0 +1,12 @@
+.intersect{
+
+  &.animation{
+    animation-fill-mode: both;
+    animation-play-state: paused;
+
+    &.active{
+      animation-play-state: running;
+    }
+  }
+
+}

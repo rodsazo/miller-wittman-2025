@@ -17,7 +17,7 @@ $link = get_link_params($link);
 
     <div class="container">
 
-        <div class="homeIntro__text">
+        <div class="homeIntro__text | intersect animation">
             <?php echo $text; ?>
         </div>
 
