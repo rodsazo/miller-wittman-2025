@@ -13,7 +13,7 @@ foreach ($hightlights as $hightlight) {
 ?>
 
 <div>
-    <h2 class="h-2">
+    <h2 class="h-2 intersect animation | highlightHeading">
         <?php echo $heading; ?>
     </h2>
 </div>

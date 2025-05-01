@@ -23,6 +23,7 @@
     font-size: 36px;
     line-height: 1;
     letter-spacing: -0.01em;
+    animation: homeIntro__text 1.5s ease-out;
   }
   &__cta{
     margin-top: 48px;
@@ -95,5 +96,18 @@
   }
   to{
     transform: translate(var(--marquee-row-scroll-distance));
+  }
+}
+
+@keyframes homeIntro__text {
+  from{
+    transform: translateY(8vw);
+    line-height: 1.2;
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    line-height: 1;
+    opacity: 1;
   }
 }

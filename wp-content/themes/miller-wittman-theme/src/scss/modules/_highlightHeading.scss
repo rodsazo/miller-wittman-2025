@@ -1,0 +1,16 @@
+.highlightHeading{
+  animation-name: highlightHeading;
+}
+
+@keyframes highlightHeading {
+  from{
+    transform: translateY(4vw);
+    opacity: 0;
+    line-height: 1.1;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+    line-height: 0.96;
+  }
+}
