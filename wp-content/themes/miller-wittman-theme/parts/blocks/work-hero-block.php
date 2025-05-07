@@ -5,12 +5,17 @@ $terms = wp_get_post_terms( get_the_ID(), \Theme\CustomTaxonomies::TAX_WORK_CAT 
 $tags = get_field('tags');
 $tags = explode('<br />', $tags);
 $content = get_field('content');
+
+$image_id = get_field('image');
+if( !$image_id ){
+    $image_id = get_post_thumbnail_id();
+}
 ?>
 
 <div class="container">
-    <?php if( $thumb_id = get_post_thumbnail_id() ): ?>
+    <?php if( $image_id ): ?>
         <div class="workHero__thumbnail u-of">
-            <?php echo wp_get_attachment_image( $thumb_id, SIZE_FULL ) ?>
+            <?php echo wp_get_attachment_image( $image_id, SIZE_FULL ) ?>
         </div>
     <?php endif; ?>
     <header class="workHero__header flow flow--tiny">
