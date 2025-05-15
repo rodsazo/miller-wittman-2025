@@ -31,6 +31,14 @@
     align-items: center;
   }
 
+  &__logo{
+    svg{
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+  }
+
   &__nav{
 
     text-transform: uppercase;
@@ -82,7 +90,9 @@
     --siteHeader-bg: #{$color-coal};
 
     .siteHeader__logoText{
-      fill: white;
+      &, path{
+        fill: white;
+      }
     }
   }
 
