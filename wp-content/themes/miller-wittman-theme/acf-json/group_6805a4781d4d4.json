@@ -1,11 +1,32 @@
 {
     "key": "group_6805a4781d4d4",
-    "title": "Block: Accordions",
+    "title": "Block: Areas of Expertise",
     "fields": [
         {
             "key": "field_6805a478f5b5a",
-            "label": "Title",
+            "label": "Section title",
             "name": "title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6826651b61726",
+            "label": "Text heading",
+            "name": "text_heading",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -46,7 +67,7 @@
         },
         {
             "key": "field_6805a4a3c5c15",
-            "label": "Accordions",
+            "label": "Sub Items",
             "name": "accordions",
             "aria-label": "",
             "type": "repeater",
@@ -131,5 +152,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745232623
+    "modified": 1747346731
 }

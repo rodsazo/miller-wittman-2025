@@ -3,21 +3,24 @@
 
   --m-80: 80px;
   --m-96: 96px;
+  --m-74: 74px;
   --m-128: 128px;
 
   @media screen and (max-width: $bp-laptop--small){
     --container-padding-sides: 20px;
 
-    --m-80: 64px;
     --m-96: 72px;
+    --m-80: 64px;
+    --m-74: 60px;
     --m-128: 96px;
   }
 
   @media screen and (max-width: $bp-tablet--small){
     --container-padding-sides: 20px;
 
-    --m-80: 60px;
     --m-96: 64px;
+    --m-80: 60px;
+    --m-74: 52px;
   }
 }
 

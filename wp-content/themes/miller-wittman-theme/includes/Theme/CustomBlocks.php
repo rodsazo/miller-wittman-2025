@@ -19,7 +19,7 @@ class CustomBlocks{
         $blocks->addBlock('work', 'Work Page');
         $blocks->addBlock('two-column-text', 'Two-column Text');
         $blocks->addBlock('logo-carousel', 'Logo Carousel');
-        $blocks->addBlock('accordions', 'Accordions');
+        $blocks->addBlock('accordions', 'Areas of Expertise');
         $blocks->addBlock('team', 'Team');
         // DONE
         $blocks->addBlock('insights', 'Insights Page');

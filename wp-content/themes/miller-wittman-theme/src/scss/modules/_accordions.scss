@@ -1,10 +1,25 @@
+@at-root :root{
+  --accordions-columns: 1;
+}
+
 .accordions{
-  padding: var(--m-96) 0;
+  padding: var(--m-74) 0 var(--m-96);
   background: $color-beige;
+
+  &.not-first{
+    padding-top: 32px;
+  }
+
 
   &__header{
     padding-top: 64px;
     border-top: 4px solid;
+  }
+
+  &__textHeading{
+    font-size: 24px;
+    @include f_display;
+    line-height: 1.2;
   }
 
   &__list{
@@ -78,12 +93,40 @@
     }
   }
 
+  &__grid{
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(var(--accordions-columns), 1fr);
+    gap: 40px;
+  }
+
+  &__gridItem{
+    border-top: 1px solid;
+    padding-top: 24px;
+  }
+
+  &__gridTitle{
+    @include f_soehne;
+    font-size: 64px;
+    line-height: 0.95;
+  }
+  &__gridContent{
+    font-size: 24px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    font-weight: 300;
+  }
+
 
   @media screen and (min-width: $bp-tablet){
     &__plus{
       width: 56px;
       height: 56px;
     }
+  }
+
+  @media screen and (min-width: $bp-laptop--small){
+    --accordions-columns: 3;
   }
 
 }
