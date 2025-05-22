@@ -14,6 +14,7 @@ class CustomBlocks{
         $blocks->addBlock('testimonials', 'Testimonials');
         $blocks->addBlock('work-hero', 'Work Post Hero');
         $blocks->addBlock('image-grid', 'Image Grid');
+        $blocks->addBlock('image-stack', 'Image Stack');
         $blocks->addBlock('page-hero', 'Page Hero');
         $blocks->addBlock('basic-text', 'Text Block');
         $blocks->addBlock('work', 'Work Page');

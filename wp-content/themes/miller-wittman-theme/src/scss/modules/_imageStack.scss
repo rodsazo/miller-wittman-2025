@@ -1,0 +1,15 @@
+.imageStack{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @media screen and (min-width: $bp-tablet){
+    gap: 40px;
+  }
+}
