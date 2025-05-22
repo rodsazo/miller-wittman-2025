@@ -3,6 +3,31 @@
     "title": "Block: Image Grid",
     "fields": [
         {
+            "key": "field_682fb0599f57b",
+            "label": "Image crop",
+            "name": "image_crop",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "4_3": "4x3",
+                "3_2": "3x2",
+                "none": "None"
+            },
+            "default_value": "4_3",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
             "key": "field_68050226aff8d",
             "label": "Gallery",
             "name": "gallery",
@@ -49,5 +74,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745158709
+    "modified": 1747955904
 }

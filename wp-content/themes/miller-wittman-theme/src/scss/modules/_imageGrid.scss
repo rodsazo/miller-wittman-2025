@@ -1,9 +1,23 @@
+@at-root :root{
+  --image-grid-aspect-ratio: 1.3333;
+}
+
 .imageGrid{
   display: grid;
   gap: 24px;
 
   &__item{
-    aspect-ratio: 1.333;
+    aspect-ratio: var(--image-grid-aspect-ratio);
+
+    &--auto{
+      aspect-ratio: auto;
+
+      img{
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
 
     &.full-width{
       grid-column: 1 / -1;
