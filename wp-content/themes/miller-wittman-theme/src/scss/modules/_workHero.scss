@@ -1,8 +1,13 @@
 .workHero{
   &__thumbnail{
     position: relative;
-    aspect-ratio: 1.7;
     margin-bottom: 80px;
+
+    img {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
   }
   &__header{
     padding-bottom: 40px;

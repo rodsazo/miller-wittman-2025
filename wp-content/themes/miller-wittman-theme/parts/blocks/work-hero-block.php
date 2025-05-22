@@ -14,7 +14,7 @@ if( !$image_id ){
 
 <div class="container">
     <?php if( $image_id ): ?>
-        <div class="workHero__thumbnail u-of">
+        <div class="workHero__thumbnail">
             <?php echo wp_get_attachment_image( $image_id, SIZE_FULL ) ?>
         </div>
     <?php endif; ?>
