@@ -24,6 +24,30 @@
             "append": ""
         },
         {
+            "key": "field_682fae3e118e8",
+            "label": "Selection Mode",
+            "name": "selection_mode",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "latest": "Latest posts",
+                "manual": "Manual selection"
+            },
+            "default_value": "latest",
+            "return_format": "value",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "layout": "horizontal"
+        },
+        {
             "key": "field_6802574546d91",
             "label": "Number of items",
             "name": "max_items",
@@ -31,7 +55,15 @@
             "type": "number",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_682fae3e118e8",
+                        "operator": "==",
+                        "value": "latest"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -45,6 +77,44 @@
             "step": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_682fae6c118e9",
+            "label": "Featured items",
+            "name": "featured_items",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_682fae3e118e8",
+                        "operator": "==",
+                        "value": "manual"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "work"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "return_format": "id",
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "elements": "",
+            "bidirectional": 0,
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -65,5 +135,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744983901
+    "modified": 1747955522
 }

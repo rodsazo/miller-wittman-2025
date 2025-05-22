@@ -1,13 +1,26 @@
 <?php
-$max_items = get_field('max_items');
-$section_title = get_field('title');
 $work_page_id = get_work_page_id();
+$section_title = get_field('title');
+
+$max_items = get_field('max_items');
+$selection_mode = get_field('selection_mode') ?? 'latest';
+
 openBlock();
 
-$work_posts = new WP_Query([
+$query_args = [
     'post_type' => \Theme\CustomPostTypes::WORK,
-    'posts_per_page' => $max_items,
-]);
+];
+
+if( $selection_mode === 'latest') {
+    $query_args['posts_per_page'] = $max_items;
+} else if( $selection_mode === 'manual') {
+    $selected_posts_ids = get_field('featured_items') ?? [];
+    $query_args['post__in'] = $selected_posts_ids;
+    $query_args['orderby'] = 'post__in';
+}
+
+
+$work_posts = new WP_Query( $query_args );
 
 ?>
 
