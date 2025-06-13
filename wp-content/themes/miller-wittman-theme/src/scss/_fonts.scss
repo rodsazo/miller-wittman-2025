@@ -8,7 +8,7 @@
 }
 
 @include fontUrls(400, normal, 'Regular');
-@include fontUrls(400, italic, 'Italic');
+@include fontUrls(400, italic, 'It');
 @include fontUrls(600, normal, 'Medium');
 @include fontUrls(700, normal, 'Bold');
 @include fontUrls(700, italic, 'BdIt');

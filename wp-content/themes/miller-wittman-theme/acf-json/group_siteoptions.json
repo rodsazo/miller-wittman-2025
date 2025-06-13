@@ -238,6 +238,27 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_684caefab204e",
+            "label": "Disclaimer",
+            "name": "footer_disclaimer",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
         }
     ],
     "location": [
@@ -258,5 +279,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745190139
+    "modified": 1749856013
 }
