@@ -17,6 +17,7 @@ class CustomBlocks{
         $blocks->addBlock('image-stack', 'Image Stack');
         $blocks->addBlock('page-hero', 'Page Hero');
         $blocks->addBlock('basic-text', 'Text Block');
+        $blocks->addBlock('centered-text', 'Centered Text Block');
         $blocks->addBlock('work', 'Work Page');
         $blocks->addBlock('two-column-text', 'Two-column Text');
         $blocks->addBlock('logo-carousel', 'Logo Carousel');
