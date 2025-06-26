@@ -17,6 +17,9 @@
   &__slides{
     position: relative;
     margin-top: 24px;
+    &.active{
+      transition: height 0.3s ease-out;
+    }
   }
 
   &__slide{
@@ -34,7 +37,7 @@
 
     @if( $is-gutenberg ){
       + .testimonials__slide{
-        marign-top: 40px;
+        margin-top: 40px;
       }
     }
 
