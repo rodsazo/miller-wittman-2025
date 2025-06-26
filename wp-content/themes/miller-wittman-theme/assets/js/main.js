@@ -557,3 +557,6 @@ jQuery(function ($) {
     sticky_threshold = $globalBanner.outerHeight();
   }
 });
+jQuery(function ($) {
+  alert(1);
+});
