@@ -2,9 +2,12 @@
 
 openBlock();
 
+$layout = get_field('layout') ?: '2col';
 $testimonials = get_field('testimonials') ?: [];
 
 $slider_id = 's' . uniqid();
+
+$layout_class = ( $layout === 'full' ) ? 'testimonials__layout--full-width'  : '';
 ?>
 
 <div class="testimonials">
@@ -30,7 +33,7 @@ $slider_id = 's' . uniqid();
 
                     ?>
                     <div class="testimonials__slide" data-p-slider="<?php echo $slider_id; ?>__slide">
-                        <div class="testimonials__layout">
+                        <div class="testimonials__layout <?php echo $layout_class; ?>">
 
                             <div class="testimonials__quote">
                                 <?php echo $quote; ?>
@@ -38,7 +41,7 @@ $slider_id = 's' . uniqid();
 
                             <div class="testimonials__author">
 
-                                <?php if( $author_image ): ?>
+                                <?php if( $author_image && $layout === '2col' ): ?>
                                     <div class="testimonials__authorPic">
                                         <?php echo wp_get_attachment_image( $author_image, 'medium_large'); ?>
                                     </div>

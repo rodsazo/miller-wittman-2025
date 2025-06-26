@@ -3,6 +3,32 @@
     "title": "Block: Testimonials",
     "fields": [
         {
+            "key": "field_685c957f45bc5",
+            "label": "Layout",
+            "name": "layout",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "2col": "Two-column (with image)",
+                "full": "Full Width (no image)"
+            },
+            "default_value": "2col",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "allow_in_bindings": 1,
+            "layout": "vertical",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_6802ad0b9a5f7",
             "label": "Testimonials",
             "name": "testimonials",
@@ -54,7 +80,15 @@
                     "type": "image",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_685c957f45bc5",
+                                "operator": "==",
+                                "value": "2col"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -179,5 +213,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745231931
+    "modified": 1750898171
 }

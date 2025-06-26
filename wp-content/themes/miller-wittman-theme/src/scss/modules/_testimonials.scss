@@ -1,3 +1,9 @@
+:root{
+  --testimonials-quote-padding: 60px;
+  --testimonials-author-data-margin: 32px;
+  --testimonials-author-padding: 0;
+}
+
 .testimonials{
   background: url('../images/sand-bg.jpg');
   padding: 96px 0;
@@ -84,6 +90,8 @@
     display: flex;
     gap: 16px;
     margin-top: 13px;
+    position: relative;
+    z-index: 1;
   }
 
   @media screen and (min-width: $bp-tablet--small){
@@ -98,13 +106,24 @@
     }
     &__layout{
       grid-template-columns: 840fr 400fr;
+
+      &--full-width{
+        --testimonials-quote-padding: 0;
+        --testimonials-author-data-margin: 0;
+        --testimonials-author-padding: 30px;
+        grid-template-columns: 1fr;
+      }
     }
+
     &__quote{
       font-size: 48px;
-      padding-bottom: 60px;
+      padding-bottom: var(--testimonials-quote-padding);
+    }
+    &__author{
+      padding-bottom: var(--testimonials-author-padding);
     }
     &__authorData{
-      margin-top: 32px;
+      margin-top: var(--testimonials-author-data-margin);
     }
 
   }
