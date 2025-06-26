@@ -16,6 +16,7 @@ class CustomPostTypes
         $work->use_gutenberg = true;
         $work->supports[] = 'thumbnail';
         $work->supports[] = 'editor';
+        $work->supports[] = 'revisions';
 
     }
 }
