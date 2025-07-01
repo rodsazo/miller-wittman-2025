@@ -3,10 +3,8 @@
   --color-headings: #F5F5F5;
   position: relative;
 
-  transform: translateY(calc(15vw - 15vw * var(--scrollvar)));
-
-
   @media screen and (min-width: $bp-tablet){
+    transform: translateY(calc(15vw - 15vw * var(--scrollvar)));
     text-align: right;
     position: relative;
     z-index: -1;
