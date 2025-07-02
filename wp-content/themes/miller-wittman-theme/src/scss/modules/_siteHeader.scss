@@ -1,17 +1,26 @@
 @at-root :root{
   --siteHeader-height: 88px;
+  --siteHeader-sticky-height: 72px;
   --siteHeader-spacer: var(--siteHeader-height);
 
   --siteHeader-x-gap: 30px;
   --siteHeader-bg: white;
+  --siteHeader-logo-fill: #{$color-coal};
+  --siteHeader-color: #{$color-coal};
 
-  @media screen and (max-width: $bp-laptop--small){
-    --siteHeader-height: 72px;
+  --siteHeader-logo-height: 40px;
+  --siteHeader-lines: #eee;
+
+  @media screen and (max-width: $bp-tablet){
+    --siteHeader-height: 64px;
+    --siteHeader-sticky-height: 64px;
+    --siteHeader-logo-height: 32px;
   }
 }
 
 .siteHeader{
 
+  color: var(--siteHeader-color);
   position: absolute;
   top: 0;
   left: 0;
@@ -33,9 +42,15 @@
 
   &__logo{
     svg{
-      height: 40px;
+      height: var(--siteHeader-logo-height);
       width: auto;
       display: block;
+    }
+  }
+
+  &__logoText{
+    &, path{
+      fill: var(--siteHeader-logo-fill);
     }
   }
 
@@ -56,47 +71,50 @@
   }
 
   &__mobBtn{
-    width: 36px;
+    height: 100%;
+    aspect-ratio: 1;
     display: none;
     flex-direction: column;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-left: 1px solid var(--siteHeader-lines);
+    margin-right: calc(-1 * var(--container-padding-sides));
 
     span{
       transition: all 0.2s ease;
       display: block;
-      width: 100%;
-      height: 1px;
+      width: 18px;
+      height: 2px;
       background: currentColor;
       position: relative;
     }
 
     &.active{
       span:nth-child(1){
-        top: 11px;
+        top: 6px;
         transform: rotate(-45deg);
       }
       span:nth-child(2){
         opacity: 0;
       }
       span:nth-child(3){
-        top: -11px;
+        top: -6px;
         transform: rotate(45deg);
       }
     }
   }
 
   &--dark:not(.sticky){
-    color: white;
+    --siteHeader-color: white;
     --siteHeader-bg: #{$color-coal};
-
-    .siteHeader__logoText{
-      &, path{
-        fill: white;
-      }
-    }
+    --siteHeader-logo-fill: white;
+    --siteHeader-lines: #3E3F41;
   }
 
-  @media screen and (max-width: $bp-laptop){
+  @media screen and (max-width: $bp-tablet){
+    border-bottom: 1px solid var(--siteHeader-lines);
+    box-shadow: none !important;
     &__nav{
       display: none;
     }
@@ -106,7 +124,7 @@
   }
 
   @at-root html.sticky-menu{
-    --siteHeader-height: 72px;
+    --siteHeader-height: var(--siteHeader-sticky-height);
   }
 
   @at-root html.sticky-menu &{

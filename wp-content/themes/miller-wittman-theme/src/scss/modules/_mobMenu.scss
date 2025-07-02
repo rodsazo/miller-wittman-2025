@@ -1,33 +1,48 @@
 html.mob-menu-open{
   overflow: hidden;
+
+  --siteHeader-color: white;
+  --siteHeader-bg: #{$color-coal};
+  --siteHeader-logo-fill: white;
+  --siteHeader-lines: #3E3F41;
 }
 .mobMenu{
   display: none;
-  padding: 48px var(--container-padding-sides);
-  background: white;
+  padding: 27px var(--container-padding-sides);
+  background: $color-coal;
+  color: white;
   position: fixed;
-  top: var(--siteHeader-height);
+  top: calc( 1px + var(--siteHeader-height) );
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: 99999;
+  @include f_soehne;
+  font-size: 80px;
+  line-height: 80px;
 
   &__layout{
     height: 100%;
-    display: flex;
-    align-items: center;
   }
 
   &__nav{
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    font-size: 24px;
-    font-weight: bold;
+    gap: 27px;
+    a{
+      display: inline-block;
+      position: relative;
+    }
 
     li.current-menu-item{
-      a{
-        border-bottom: 2px solid;
+      a::after{
+        content: '';
+        position: absolute;
+        height: 6px;
+        background: $color-red;
+        width: 100%;
+        left: 0;
+        bottom: 0;
       }
     }
   }
