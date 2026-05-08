@@ -15,6 +15,7 @@ class CustomBlocks{
         $blocks->addBlock('work-hero', 'Work Post Hero');
         $blocks->addBlock('image-grid', 'Image Grid');
         $blocks->addBlock('image-stack', 'Image Stack');
+        $blocks->addBlock('partnership-hero', 'Partnership Hero');
         $blocks->addBlock('page-hero', 'Page Hero');
         $blocks->addBlock('basic-text', 'Text Block');
         $blocks->addBlock('centered-text', 'Centered Text Block');

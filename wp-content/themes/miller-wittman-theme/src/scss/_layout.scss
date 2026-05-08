@@ -30,6 +30,11 @@
   margin: 0 auto;
   box-sizing: content-box;
 
+  &--large{
+    max-width: 1352px;
+    box-sizing: unset;
+
+  }
   &--medium{
     max-width: 1112px;
   }

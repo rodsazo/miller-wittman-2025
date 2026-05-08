@@ -1,0 +1,121 @@
+.partnershipHero {
+  background: #121921;
+  color: #fff;
+  padding: 80px 0;
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  &__main {
+    max-width: 770px;
+  }
+
+  &__title {
+    margin: 0;
+    color: inherit;
+    font-size: 88px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    text-wrap: balance;
+    @media screen and (max-width: $bp-tablet) {
+      font-size: 50px;
+    }
+  }
+
+  &__aside {
+    max-width: 424px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    flex: 0 1 auto;
+
+    img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-height: 88px;
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    p {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 0.08em;
+    }
+  }
+
+  @media screen and (min-width: $bp-laptop--small) {
+    padding: 176px 0;
+
+    &__row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
+      align-items: flex-end;
+      gap: clamp(48px, 8vw, 156px);
+    }
+
+    &__main {
+      width: auto;
+    }
+
+    &__aside {
+      width: auto;
+      margin-top: 0;
+      max-width: none;
+    }
+  }
+  @media screen and (max-width: $bp-laptop--small) {
+    &__aside {
+      max-width: none;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 24px;
+    }
+
+    &__logos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 24px;
+      flex: 0 1 auto;
+    }
+
+    &__text {
+      max-width: 424px;
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+  }
+  @media screen and (max-width: $bp-tablet--small) {
+    &__aside {
+      flex-direction: column;
+    }
+  }
+}
