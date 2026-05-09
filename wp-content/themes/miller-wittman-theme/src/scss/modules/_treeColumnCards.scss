@@ -1,0 +1,168 @@
+.treeColumnCards {
+  background: #fff;
+  color: #121921;
+  padding: 80px 0;
+
+  &.no-header {
+    margin-top: 0;
+  }
+
+  &__container {
+    max-width: 1352px;
+  }
+
+  &__inner {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    &.has-header {
+      border-top: 4px solid #121921;
+    }
+
+    &.no-header {
+      padding-top: 0;
+      gap: 0;
+    }
+  }
+
+  &__header {
+    display: grid;
+    gap: 24px 40px;
+    align-items: end;
+
+    &.has-subtitle {
+      @media screen and (min-width: $bp-tablet) {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    color: inherit;
+    font-size: 96px;
+    line-height: 0.8;
+    @include f_soehne;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    justify-self: start;
+    color: var(--color-accent);
+    font-size: 48px;
+    line-height: 0.8;
+    @include f_soehne;
+    text-transform: uppercase;
+
+    @media screen and (min-width: $bp-tablet) {
+      justify-self: end;
+      text-align: right;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: start;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  &__rule {
+    width: 100%;
+    max-width: 400px;
+    height: 1px;
+    background: #121921;
+  }
+
+  &__largeText {
+    color: inherit;
+    font-size: 64px;
+    line-height: 0.8;
+    @include f_soehne;
+    text-transform: uppercase;
+  }
+
+  &__cardTitle {
+    margin: 0;
+    color: inherit;
+    font-size: 32px;
+    line-height: 1.2;
+    font-family: "Helvetica Now Display", sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  &__text {
+    max-width: 400px;
+    color: inherit;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    font-family: "Helvetica Now Display", sans-serif;
+    font-weight: 400;
+  }
+
+  &__card.has-large-text {
+    .treeColumnCards__cardTitle {
+      font-size: 24px;
+    }
+
+    .treeColumnCards__text {
+      font-size: 18px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: flex-start;
+
+    img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 113px;
+      max-height: 64px;
+      object-fit: contain;
+      object-position: left center;
+    }
+  }
+
+  @media screen and (max-width: $bp-laptop--small) {
+    padding: 64px 0;
+    &__grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    &__inner {
+      padding-top: 64px;
+    }
+  }
+
+  @media screen and (max-width: $bp-tablet--small) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+    &__rule {
+      max-width: inherit;
+    }
+    &__text {
+      max-width: inherit;
+    }
+    &__title {
+      font-size: 64px;
+    }
+
+    &__subtitle {
+      font-size: 32px;
+    }
+  }
+}
