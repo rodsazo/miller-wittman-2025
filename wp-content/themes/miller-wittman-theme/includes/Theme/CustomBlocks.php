@@ -22,6 +22,7 @@ class CustomBlocks{
         $blocks->addBlock('work', 'Work Page');
         $blocks->addBlock('two-column-text', 'Two-column Text');
         $blocks->addBlock('logo-carousel', 'Logo Carousel');
+        $blocks->addBlock('logo-carousel-small', 'Logo Carousel Small');
         $blocks->addBlock('accordions', 'Areas of Expertise');
         $blocks->addBlock('team', 'Team');
         // DONE

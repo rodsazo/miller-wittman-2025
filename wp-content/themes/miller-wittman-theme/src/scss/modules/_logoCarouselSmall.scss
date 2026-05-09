@@ -1,0 +1,80 @@
+.logoCarouselSmall{
+  overflow: hidden;
+
+  &__viewport{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    
+    min-height: 120px;
+  }
+
+  &__track{
+    display: flex;
+    align-items: center;
+    width: max-content;
+    flex: 0 0 auto;
+    gap: 80px;
+    will-change: transform;
+  }
+
+  &__group{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    flex: 0 0 auto;
+  }
+
+  &__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    user-select: none;
+  }
+
+  &__image{
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 230px;
+    max-height: 40px;
+    object-fit: contain;
+    object-position: center center;
+  }
+}
+
+@media screen and (max-width: 1080px){
+  .logoCarouselSmall{
+    &__viewport{
+      padding-block: 36px;
+    }
+
+    &__track,
+    &__group{
+      gap: 64px;
+    }
+
+    &__image{
+      max-height: 36px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .logoCarouselSmall{
+    &__viewport{
+      padding-block: 28px;
+    }
+
+    &__track,
+    &__group{
+      gap: 48px;
+    }
+
+    &__image{
+      max-height: 32px;
+      max-width: 200px;
+    }
+  }
+}
