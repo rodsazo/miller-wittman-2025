@@ -19,6 +19,7 @@ class CustomBlocks{
         $blocks->addBlock('page-hero', 'Page Hero');
         $blocks->addBlock('basic-text', 'Text Block');
         $blocks->addBlock('centered-text', 'Centered Text Block');
+        $blocks->addBlock('column-content', 'Column Content');
         $blocks->addBlock('work', 'Work Page');
         $blocks->addBlock('two-column-text', 'Two-column Text');
         $blocks->addBlock('logo-carousel', 'Logo Carousel');

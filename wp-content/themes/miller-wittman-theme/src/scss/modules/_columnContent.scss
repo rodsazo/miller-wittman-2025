@@ -1,0 +1,52 @@
+.columnContentBlock {
+  background: #efeeeb;
+  color: #121921;
+  padding: clamp(48px, 6vw, 80px) 0;
+
+  --body-text-color: #121921;
+  --color-headings: #121921;
+
+  .container {
+    max-width: 1352px;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+
+  &__title {
+    color: inherit;
+    font-size: 96px;
+    line-height: 0.8;
+    @include f_soehne;
+  }
+
+  &__text {
+    --body-font-size: 24px;
+    --body-line-height: 1.4;
+    gap: 0;
+
+    p {
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  @media screen and (max-width: $bp-laptop--small) {
+    &__title {
+      font-size: 72px;
+    }
+  }
+
+  @media screen and (max-width: $bp-tablet--small) {
+    &__row {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+}
