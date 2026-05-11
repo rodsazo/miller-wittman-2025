@@ -1,0 +1,111 @@
+.partnersHighlight {
+    background: #000;
+    color: #fff;
+    --body-text-color: #fff;
+    --color-headings: #fff;
+
+    .container {
+        max-width: 1352px;
+    }
+}
+
+.partnersHighlight__panel {
+    background: #000;
+    padding: 80px;
+}
+
+.partnersHighlight__content {
+    display: grid;
+    grid-template-columns: minmax(104px, 120px) minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 40px;
+}
+
+.partnersHighlight__number {
+    color: #c9384b;
+    font-family: "Soehne Schmal";
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: clamp(180px, 18vw, 296px);
+    line-height: 0.8;
+    display: inline-block;
+    padding: 0;
+    letter-spacing: -0.04em;
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+}
+
+.partnersHighlight__largeText {
+    color: #c9384b;
+    font-family: "Soehne Schmal";
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: clamp(40px, 4.8vw, 64px);
+    line-height: 0.95;
+    display: inline-block;
+    padding: 0;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+}
+
+.partnersHighlight__text {
+    max-width: 520px;
+    color: #fff;
+    font-family: "Helvetica Now Display", sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+}
+
+.partnersHighlight__text p {
+    margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .partnersHighlight {
+        padding: 64px 0;
+    }
+
+    .partnersHighlight__panel {
+        padding: 56px 48px;
+    }
+
+    .partnersHighlight__content {
+        gap: 32px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .partnersHighlight__content {
+        grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+        grid-template-areas:
+            "number largeText"
+            "text text";
+        align-items: start;
+        column-gap: 40px;
+        row-gap: 18px;
+    }
+
+    .partnersHighlight__text {
+        grid-area: text;
+        max-width: 720px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .partnersHighlight {
+        padding: 48px 0;
+    }
+
+    .partnersHighlight__panel {
+        padding: 40px 24px;
+    }
+
+    .partnersHighlight__text {
+        font-size: 18px;
+    }
+}
