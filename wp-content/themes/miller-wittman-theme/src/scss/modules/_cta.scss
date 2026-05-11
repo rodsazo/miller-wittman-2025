@@ -1,0 +1,118 @@
+.ctaBlock {
+  background: #AB1A2D;
+  color: #fff;
+  padding: clamp(80px, 10vw, 120px) 0;
+
+
+  &__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(40px, 6vw, 80px);
+    align-items: start;
+  }
+
+  &__title {
+    margin: 0;
+    @include f_soehne;
+    font-size: clamp(50px, 5vw, 80px);
+    line-height: 0.96;
+    text-wrap: balance;
+  }
+
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    padding-top: 2px;
+  }
+
+  &__text {
+    max-width: 656px;
+    @include f_display;
+    font-size: clamp(20px, 2vw, 24px);
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__actions {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__button,
+  &__arrowButton {
+    color: #121921;
+    background: #fff;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+      transform: translateY(-1px);
+    }
+  }
+
+  &__button {
+    min-height: 56px;
+    padding: 20px 49.5px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Helvetica Now', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  &__arrowButton {
+    width: 56px;
+    height: 56px;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+
+    &:hover,
+    &:focus-visible {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    svg {
+      display: block;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media screen and (max-width: $bp-laptop--small) {
+    &__inner {
+      grid-template-columns: 1fr;
+    }
+
+    &__aside {
+      gap: 32px;
+    }
+  }
+
+  @media screen and (max-width: $bp-tablet--small) {
+    padding: 80px 0;
+
+    &__button {
+      padding-inline: 32px;
+    }
+  }
+}

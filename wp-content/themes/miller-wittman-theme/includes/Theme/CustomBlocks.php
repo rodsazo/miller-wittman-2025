@@ -19,6 +19,7 @@ class CustomBlocks{
         $blocks->addBlock('page-hero', 'Page Hero');
         $blocks->addBlock('basic-text', 'Text Block');
         $blocks->addBlock('centered-text', 'Centered Text Block');
+        $blocks->addBlock('cta', 'CTA');
         $blocks->addBlock('column-content', 'Column Content');
         $blocks->addBlock('problem-highlight', 'Problem Highlight');
         $blocks->addBlock('solution-highlight', 'Solution Highlight');
