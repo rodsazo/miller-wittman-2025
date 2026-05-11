@@ -21,6 +21,7 @@ class CustomBlocks{
         $blocks->addBlock('centered-text', 'Centered Text Block');
         $blocks->addBlock('column-content', 'Column Content');
         $blocks->addBlock('problem-highlight', 'Problem Highlight');
+        $blocks->addBlock('solution-highlight', 'Solution Highlight');
         $blocks->addBlock('tree-column-cards', 'Tree Column Cards');
         $blocks->addBlock('work', 'Work Page');
         $blocks->addBlock('two-column-text', 'Two-column Text');

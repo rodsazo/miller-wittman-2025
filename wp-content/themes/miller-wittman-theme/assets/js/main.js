@@ -605,6 +605,8 @@ jQuery(function ($) {
   $body.on('click', '.js-slideReplace', doTheReplace);
   $body.on('click', '[data-slide-replace]', doTheReplace);
 });
+// Presentational block only. This file keeps the block aligned with the
+// project convention for block-specific JS modules.
 jQuery(function ($) {
   const $body = $('html');
   const $header = $('.siteHeader');
