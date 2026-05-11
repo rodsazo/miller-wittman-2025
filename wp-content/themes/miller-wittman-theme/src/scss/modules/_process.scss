@@ -1,0 +1,195 @@
+.process {
+  background: $color-beige;
+  color: $color-coal;
+  padding: 80px 0 72px;
+
+  &__container {
+    max-width: 1352px;
+  }
+
+  &__inner {
+    padding-top: 80px;
+    border-top: 4px solid $color-coal;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 40px;
+    align-items: start;
+  }
+
+  &__title {
+    margin: 0;
+    color: inherit;
+    @include f_soehne;
+    font-size: clamp(64px, 6.7vw, 96px);
+    line-height: 0.8;
+    text-transform: uppercase;
+    text-wrap: balance;
+  }
+
+  &__summary {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-end;
+    text-align: right;
+    min-width: 0;
+  }
+
+  &__subtitle {
+    color: $color-red;
+    @include f_soehne;
+    font-size: clamp(32px, 3.2vw, 48px);
+    line-height: 0.8;
+    text-transform: uppercase;
+    text-wrap: balance;
+    max-width: 100%;
+  }
+
+  &__text {
+    max-width: 656px;
+    color: inherit;
+    font-family: "Helvetica Now Display", sans-serif;
+    font-size: 24px;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+
+    br {
+      display: block;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(var(--process-cards-count), minmax(0, 1fr));
+    gap: 40px;
+    align-items: start;
+  }
+
+  &__card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: space-between;
+    min-height: 100%;
+  }
+
+  &__cardNumber {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $color-red;
+    color: #fff;
+    @include f_soehne;
+    font-size: 40px;
+    line-height: 0.8;
+    text-transform: uppercase;
+    flex: 0 0 auto;
+  }
+
+  &__cardBody {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0;
+  }
+
+  &__cardTitle {
+    margin: 0;
+    color: inherit;
+    font-family: "Helvetica Now Display", sans-serif;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  &__cardText {
+    color: inherit;
+    font-family: "Helvetica Now Text", sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+  }
+
+  &__cardPartners {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: inherit;
+    margin-top: auto;
+    min-width: 0;
+  }
+
+  &__cardPartnersIcon {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 auto;
+    color: $color-red;
+  }
+
+  &__cardPartnersText {
+    color: inherit;
+    font-family: "Helvetica Now Text", sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    min-width: 0;
+  }
+
+  @media screen and (max-width: $bp-laptop--small) {
+    padding: 64px 0 56px;
+
+    &__inner {
+      padding-top: 64px;
+      gap: 64px;
+    }
+
+    &__cards {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 32px;
+    }
+  }
+
+  @media screen and (max-width: $bp-tablet) {
+    &__header {
+      grid-template-columns: 1fr;
+    }
+
+    &__summary {
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+
+  @media screen and (max-width: $bp-tablet--small) {
+    padding: 56px 0 48px;
+
+    &__inner {
+      padding-top: 48px;
+      gap: 40px;
+    }
+
+    &__cards {
+      grid-template-columns: 1fr;
+    }
+
+    &__card {
+      gap: 20px;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+  }
+}
