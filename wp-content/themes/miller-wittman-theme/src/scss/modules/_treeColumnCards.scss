@@ -1,6 +1,6 @@
 .treeColumnCards {
   background: #fff;
-  color: #121921;
+  color: $color-coal;
   padding: 80px 0;
 
   &.no-header {
@@ -18,7 +18,7 @@
     gap: 80px;
 
     &.has-header {
-      border-top: 4px solid #121921;
+      border-top: 4px solid $color-coal;
     }
 
     &.no-header {
@@ -80,7 +80,7 @@
     width: 100%;
     max-width: 400px;
     height: 1px;
-    background: #121921;
+    background: $color-coal;
   }
 
   &__largeText {

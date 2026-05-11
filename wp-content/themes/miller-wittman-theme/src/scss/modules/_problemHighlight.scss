@@ -1,0 +1,105 @@
+.problemHighlight {
+  background: $color-red;
+  color: #fff;
+  padding: 120px 80px;
+
+  --body-text-color: #fff;
+  --color-headings: #fff;
+
+  .container {
+    max-width: 1352px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr);
+    align-items: start;
+    gap: 40px;
+  }
+
+  &__title {
+    margin: 0;
+    color: inherit;
+    font-family: "Soehne Schmal";
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 80px;
+    line-height: 0.8;
+    text-wrap: balance;
+  }
+
+  &__icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: currentColor;
+    flex: 0 0 auto;
+
+    svg {
+      display: block;
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 0;
+  }
+
+  &__lead {
+    font-family: "Helvetica Now Display", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    max-width: 720px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  @media screen and (max-width: $bp-laptop--small) {
+    padding: clamp(20px, 8vw, 120px) clamp(20px, 3vw, 80px);
+    &__title {
+      font-size: 64px;
+    }    
+  }
+
+  @media screen and (max-width: $bp-tablet) {
+    &__inner {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    &__icon {
+      width: 48px;
+      height: 48px;
+
+      svg {
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    &__content {
+      grid-column: auto;
+    }
+  }
+}

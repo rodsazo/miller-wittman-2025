@@ -20,6 +20,7 @@ class CustomBlocks{
         $blocks->addBlock('basic-text', 'Text Block');
         $blocks->addBlock('centered-text', 'Centered Text Block');
         $blocks->addBlock('column-content', 'Column Content');
+        $blocks->addBlock('problem-highlight', 'Problem Highlight');
         $blocks->addBlock('tree-column-cards', 'Tree Column Cards');
         $blocks->addBlock('work', 'Work Page');
         $blocks->addBlock('two-column-text', 'Two-column Text');
