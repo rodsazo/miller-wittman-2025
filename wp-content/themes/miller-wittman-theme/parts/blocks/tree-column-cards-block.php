@@ -34,6 +34,7 @@ $has_header = $title || $subtitle;
                         $text = $card['text'] ?? '';
                         $logo = $card['logo'] ?? 0;
                         $logo_id = 0;
+                        $has_card_content = $large_text || $card_title || $text || $logo;
                         $card_class = $large_text ? ' has-large-text' : '';
 
                         if ( is_array( $logo ) && ! empty( $logo['ID'] ) ) {
@@ -43,7 +44,9 @@ $has_header = $title || $subtitle;
                         }
                         ?>
                         <div class="treeColumnCards__card<?php echo esc_attr( $card_class ); ?>">
-                            <div class="treeColumnCards__rule"></div>
+                            <?php if ( $has_card_content ) : ?>
+                                <div class="treeColumnCards__rule"></div>
+                            <?php endif; ?>
 
                             <?php if ( $large_text ) : ?>
                                 <div class="treeColumnCards__largeText">

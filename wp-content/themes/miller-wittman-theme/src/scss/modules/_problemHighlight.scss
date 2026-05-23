@@ -17,6 +17,10 @@
     gap: 40px;
   }
 
+  &__inner--noTitle {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   &__title {
     margin: 0;
     color: inherit;
@@ -50,6 +54,10 @@
     flex-direction: column;
     gap: 24px;
     min-width: 0;
+  }
+
+  &__content--fullWidth {
+    grid-column: 1 / -1;
   }
 
   &__lead {
@@ -99,6 +107,10 @@
     }
 
     &__content {
+      grid-column: auto;
+    }
+
+    &__content--fullWidth {
       grid-column: auto;
     }
   }
