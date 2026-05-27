@@ -24,7 +24,7 @@ class CustomBlocks{
         $blocks->addBlock('problem-highlight', 'Problem Highlight');
         $blocks->addBlock('solution-highlight', 'Solution Highlight');
         $blocks->addBlock('partners-highlight', 'Partners Highlight');
-        $blocks->addBlock('tree-column-cards', 'Tree Column Cards');
+        $blocks->addBlock('tree-column-cards', 'Three Column Cards');
         $blocks->addBlock('process', 'Process');
         $blocks->addBlock('work', 'Work Page');
         $blocks->addBlock('two-column-text', 'Two-column Text');
