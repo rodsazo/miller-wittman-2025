@@ -1,6 +1,6 @@
 {
     "key": "group_tree_column_cards",
-    "title": "Block: Tree Column Cards",
+    "title": "Block: Three Column Cards",
     "fields": [
         {
             "key": "field_tree_column_cards_title",
@@ -58,7 +58,7 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "row",
+            "layout": "block",
             "pagination": 0,
             "min": 0,
             "max": 3,
@@ -182,5 +182,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1778347727
+    "modified": 1779918602
 }
