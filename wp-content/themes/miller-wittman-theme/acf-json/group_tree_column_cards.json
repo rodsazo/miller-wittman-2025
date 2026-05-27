@@ -76,7 +76,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "25",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
@@ -98,7 +98,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "25",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
@@ -120,19 +120,17 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "35",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
                     "default_value": "",
                     "maxlength": "",
                     "allow_in_bindings": 0,
+                    "rows": 4,
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_tree_column_cards_cards",
                     "new_lines": "br",
-                    "rows": 4
+                    "parent_repeater": "field_tree_column_cards_cards"
                 },
                 {
                     "key": "field_tree_column_cards_logo",
@@ -144,7 +142,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "15",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
@@ -157,8 +155,8 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": "",
-                    "preview_size": "medium",
                     "allow_in_bindings": 0,
+                    "preview_size": "medium",
                     "parent_repeater": "field_tree_column_cards_cards"
                 }
             ]
@@ -182,5 +180,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1779918602
+    "modified": 1779918715
 }
