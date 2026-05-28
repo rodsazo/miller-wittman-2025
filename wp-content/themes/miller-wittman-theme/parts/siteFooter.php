@@ -1,20 +1,28 @@
 <?php
+global $post;
 $contact_email = get_field('contact_email', 'options');
+$topFooter = true;
+if( is_page()){
+    $topFooter = $post->post_name != 'partnerships';
+}
+$footerClass = $topFooter ? '' : 'siteFooter--no-top';
 ?>
-<div class="siteFooter">
+<div class="siteFooter <?= $footerClass; ?>">
 
     <div class="container">
-        <div class="siteFooter__top">
-            <h5 class="h-2">Let's Talk</h5>
-            <?php if( $contact_email ): ?>
-                <a class="siteFooter__cta" href="mailto:<?php echo $contact_email ; ?>">
-                    <span>Email Us</span>
-                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M30.1148 46.1147L33.8855 49.8854L51.7708 32.0001L33.8855 14.1147L30.1148 17.8854L41.5628 29.3334H16.0001V34.6667H41.5628L30.1148 46.1147Z" fill="#AB1A2D"/>
-                    </svg>
-                </a>
-            <?php endif; ?>
-        </div>
+        <?php if( $topFooter ): ?>
+            <div class="siteFooter__top">
+                <h5 class="h-2">Let's Talk</h5>
+                <?php if( $contact_email ): ?>
+                    <a class="siteFooter__cta" href="mailto:<?php echo $contact_email ; ?>">
+                        <span>Email Us</span>
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30.1148 46.1147L33.8855 49.8854L51.7708 32.0001L33.8855 14.1147L30.1148 17.8854L41.5628 29.3334H16.0001V34.6667H41.5628L30.1148 46.1147Z" fill="#AB1A2D"/>
+                        </svg>
+                    </a>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
 
         <div class="siteFooter__bottom">
             <address class="flow flow--tight">
