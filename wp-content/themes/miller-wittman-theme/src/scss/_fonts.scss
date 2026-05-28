@@ -28,6 +28,13 @@
   src: url('../font/helvetica-now/HelveticaNowDisplay-Bd.otf');
 }
 
+@font-face {
+  font-family: "Helvetica Now Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/helvetica-now/HelveticaNowDisplay-Regular.otf');
+}
+
 @mixin f_soehne{
   font-family: 'Soehne Schmal';
   font-style: normal;
