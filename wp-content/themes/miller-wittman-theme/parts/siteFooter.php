@@ -1,16 +1,16 @@
 <?php
 global $post;
 $contact_email = get_field('contact_email', 'options');
-$topFooter = true;
+$fullFooter    = true;
 if( is_page()){
-    $topFooter = $post->post_name != 'partnerships';
+    $fullFooter = $post->post_name != 'partnerships';
 }
-$footerClass = $topFooter ? '' : 'siteFooter--no-top';
+$footerClass = $fullFooter ? '' : 'siteFooter--no-top';
 ?>
 <div class="siteFooter <?= $footerClass; ?>">
 
     <div class="container">
-        <?php if( $topFooter ): ?>
+        <?php if( $fullFooter ): ?>
             <div class="siteFooter__top">
                 <h5 class="h-2">Let's Talk</h5>
                 <?php if( $contact_email ): ?>
@@ -38,18 +38,21 @@ $footerClass = $topFooter ? '' : 'siteFooter--no-top';
                 <?php endif; ?>
             </address>
 
-            <form method="POST" action="//millerwittman.us16.list-manage.com/subscribe/post?u=8a381db55e7ae148c1382c960&id=5eb9be3e00">
-                <strong>Subscribe for updates</strong>
-                <div class="siteFooter__subscribe">
-                    <input class="siteFooter__textInput" placeholder="Enter email" type="email" name="EMAIL" />
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8a381db55e7ae148c1382c960_5eb9be3e00" tabindex="-1" value=""></div>
-                    <button type="submit">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.0573 23.0571L16.9427 24.9425L25.8853 15.9998L16.9427 7.05713L15.0573 8.94246L20.7813 14.6665H8V17.3331H20.7813L15.0573 23.0571Z" fill="#121921"/>
-                        </svg>
-                    </button>
-                </div>
-            </form>
+            <?php if( $fullFooter ): ?>
+
+                <form method="POST" action="//millerwittman.us16.list-manage.com/subscribe/post?u=8a381db55e7ae148c1382c960&id=5eb9be3e00">
+                    <strong>Subscribe for updates</strong>
+                    <div class="siteFooter__subscribe">
+                        <input class="siteFooter__textInput" placeholder="Enter email" type="email" name="EMAIL" />
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8a381db55e7ae148c1382c960_5eb9be3e00" tabindex="-1" value=""></div>
+                        <button type="submit">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.0573 23.0571L16.9427 24.9425L25.8853 15.9998L16.9427 7.05713L15.0573 8.94246L20.7813 14.6665H8V17.3331H20.7813L15.0573 23.0571Z" fill="#121921"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            <?php endif; ?>
         </div>
 
     </div>

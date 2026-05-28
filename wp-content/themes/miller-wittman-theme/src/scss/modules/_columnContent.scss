@@ -48,5 +48,8 @@
       flex-direction: column;
       gap: 24px;
     }
+    &__text{
+      --body-font-size: 22px;
+    }
   }
 }

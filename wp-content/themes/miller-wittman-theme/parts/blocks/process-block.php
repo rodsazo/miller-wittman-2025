@@ -66,7 +66,7 @@ $cards_count = count( $cards );
                                 <div class="process__cardPartners">
                                     <svg class="process__cardPartnersIcon" viewBox="0 0 20 20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M6 10H14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-                                        <path d="M10 6L14 10L10 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10 6L14 10L10 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                     <div class="process__cardPartnersText">
                                         <?php echo esc_html( $partners ); ?>

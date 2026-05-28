@@ -185,7 +185,25 @@
     }
 
     &__card {
-      gap: 20px;
+      display: block;
+      overflow: hidden;
+      position: relative;
+      padding-left: 64px;
+    }
+    &__cardNumber{
+      width: 48px;
+      height: 48px;
+      position: absolute;
+      font-size: 36px;
+      top: 0;
+      left: 0;
+    }
+    &__cardBody{
+      gap: 12px;
+    }
+    &__cardPartners{
+      margin-top: 12px;
+      margin-left: -6px;
     }
 
     &__text {

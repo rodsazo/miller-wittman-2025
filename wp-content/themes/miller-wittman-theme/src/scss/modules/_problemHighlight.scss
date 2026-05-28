@@ -87,7 +87,7 @@
     padding: clamp(20px, 8vw, 120px) clamp(20px, 3vw, 80px);
     &__title {
       font-size: 64px;
-    }    
+    }
   }
 
   @media screen and (max-width: $bp-tablet) {
@@ -97,6 +97,7 @@
     }
 
     &__icon {
+      display: none;
       width: 48px;
       height: 48px;
 
